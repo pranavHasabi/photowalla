@@ -125,7 +125,7 @@
             width: 100%;
             height: 100%;
             /* Semi-transparent dark overlay for text readability */
-            background-color: rgba(74, 78, 105, 0.75);
+            background-color: rgba(114, 125, 115, 0.75);
             /* Reduced opacity for better image visibility */
         }
 
@@ -271,6 +271,7 @@
             flex: 0 0 20%;
             /* Show 5 photos at a time on desktop */
             min-width: 200px;
+            min-height: 350px;
             padding: 0 8px;
             /* Gutter space */
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -341,7 +342,7 @@
             height: 2px;
             bottom: 0;
             left: 50%;
-            background-color: #9D8189; /* primary color */
+            background-color: #AAB99A; /* secondary color */
             transition: all 0.3s ease;
         }
 
@@ -359,15 +360,15 @@
             left: 0;
             width: 0%;
             height: 4px;
-            background-color: #556B2F;
+            background-color: #727D73;
             z-index: 1000;
             transition: width 0.3s ease;
         }
 
         /* Custom Scroll Bar */
         body {
-            --sb-track-color: #D4EDDA;
-            --sb-thumb-color: #556B2F;
+            --sb-track-color: #D0DDD0;
+            --sb-thumb-color: #727D73;
             --sb-size: 10px;
         }
 
@@ -404,10 +405,11 @@
             theme: {
                 extend: {
                     colors: {
-                        'primary': '#556B2F', /* Olive green for accents */
-                        'secondary': '#D4EDDA', /* Light pastel green */
-                        'background-light': '#FFFACD', /* Pastel yellow for light backgrounds */
-                        'text-dark': '#333333',
+                        'primary': '#636b2f',
+                        'secondary': '#bac095',
+                        'background-light': '#e1e9b5',
+                        'accent': '#707459',
+                        'text-dark': '#24270d',
                     },
                 }
             }
@@ -419,12 +421,8 @@
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
             <a href="#home"
                 class="flex items-center space-x-2 text-3xl font-display font-bold text-primary tracking-wider">
-                <!-- SVG Icon (Camera Lens) -->
-                <svg class="w-8 h-8 text-primary" viewBox="0 0 50 50" fill="currentColor"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M41 12H34L30 8H20L16 12H9C7.34 12 6 13.34 6 15V40C6 41.66 7.34 43 9 43H41C42.66 43 44 41.66 44 40V15C44 13.34 42.66 12 41 12ZM25 38C19.48 38 15 33.52 15 28C15 22.48 19.48 18 25 18C30.52 18 35 22.48 35 28C35 33.52 30.52 38 25 38ZM25 21C21.13 21 18 24.13 18 28C18 31.87 21.13 35 25 35C28.87 35 32 31.87 32 28C32 24.13 28.87 21 25 21ZM40 18H38V16H40V18Z" />
-                </svg>
+                <!-- Logo Image -->
+                <img src="photos/logo navbar.png" alt="Photowalaa Logo" class="w-8 h-8">
                 <span>PHOTOWALAA</span>
             </a>
             <div class="flex items-center space-x-4 hidden md:flex text-text-dark text-sm font-semibold">
@@ -670,7 +668,7 @@
                 </div>
 
                 <div class="text-center mt-12">
-                    <p class="text-lg text-gray-500 italic">We also cover Special Events like Birthdays, Musical
+                    <p class="text-lg text-gray-500 italic animated-text">We also cover Special Events like Birthdays, Musical
                         Concerts, and Fashion shoots!</p>
                 </div>
             </div>
@@ -1201,7 +1199,6 @@
         <!-- GET IN TOUCH SECTION -->
         <section id="get-in-touch" class="snap-section bg-background-light p-10 sm:p-20">
             <div class="max-w-6xl mx-auto">
-                <p class="text-center text-primary text-sm tracking-widest uppercase mb-2">Get In Touch</p>
                 <h3 class="text-4xl sm:text-5xl font-display font-semibold text-text-dark text-center mb-12">
                     GET IN TOUCH
                 </h3>
@@ -1238,6 +1235,13 @@
     </main>
 
     <!-- FLOATING ELEMENTS -->
+    <!-- Scroll to Top Button -->
+    <a href="#home" id="scroll-to-top" class="fixed bottom-20 right-5 bg-transparent text-text-dark p-3 rounded-full shadow-2xl flex items-center justify-center h-14 w-14 transition-transform hover:scale-110 z-40">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+        </svg>
+    </a>
+
     <!-- Fixed WhatsApp Button -->
     <a href="https://api.whatsapp.com/send?phone=918904801894"
         id="whatsapp-float" target="_blank"
@@ -1322,12 +1326,8 @@
             <div class="mb-4 sm:mb-0">
                 <a href="#home"
                     class="flex items-center justify-center sm:justify-start space-x-2 text-3xl font-display font-bold text-secondary">
-                    <!-- SVG Icon (Camera Lens) -->
-                    <svg class="w-8 h-8 text-secondary" viewBox="0 0 50 50" fill="currentColor"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M41 12H34L30 8H20L16 12H9C7.34 12 6 13.34 6 15V40C6 41.66 7.34 43 9 43H41C42.66 43 44 41.66 44 40V15C44 13.34 42.66 12 41 12ZM25 38C19.48 38 15 33.52 15 28C15 22.48 19.48 18 25 18C30.52 18 35 22.48 35 28C35 33.52 30.52 38 25 38ZM25 21C21.13 21 18 24.13 18 28C18 31.87 21.13 35 25 35C28.87 35 32 31.87 32 28C32 24.13 28.87 21 25 21ZM40 18H38V16H40V18Z" />
-                    </svg>
+                    <!-- Logo Image -->
+                    <img src="photos/logo navbar.png" alt="Photowalaa Logo" class="w-8 h-8">
                     <span>Photowalaa</span>
                 </a>
                 <p class="text-sm text-gray-400 mt-1">Hubli's Premier Wedding Storytellers</p>
@@ -1433,6 +1433,13 @@
             menu.classList.toggle('hidden');
         });
 
+        // Close mobile menu when a navigation link is clicked
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+
         // Combined DOMContentLoaded for scroll to top and animations
         document.addEventListener('DOMContentLoaded', function () {
             // Scroll to top on page load/reload with smooth animation
@@ -1463,6 +1470,16 @@
             const docHeight = document.body.scrollHeight - window.innerHeight;
             const scrollPercent = (scrollTop / docHeight) * 100;
             document.getElementById('scroll-progress-bar').style.width = scrollPercent + '%';
+
+            // Scroll to Top Button Visibility
+            const heroSection = document.getElementById('home');
+            const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+            const button = document.getElementById('scroll-to-top');
+            if (scrollTop > heroBottom) {
+                button.style.opacity = '1';
+            } else {
+                button.style.opacity = '0';
+            }
         });
     </script>
 </body>

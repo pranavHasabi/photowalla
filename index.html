@@ -359,35 +359,36 @@
             left: 0;
             width: 0%;
             height: 4px;
-            background-color: #9D8189;
+            background-color: #556B2F;
             z-index: 1000;
             transition: width 0.3s ease;
         }
 
         /* Custom Scroll Bar */
-        ::-webkit-scrollbar {
-            width: 12px;
+        body {
+            --sb-track-color: #D4EDDA;
+            --sb-thumb-color: #556B2F;
+            --sb-size: 10px;
         }
 
-        ::-webkit-scrollbar-track {
-            background: #f1f1f1;
-            border-radius: 10px;
+        body::-webkit-scrollbar {
+            width: var(--sb-size);
         }
 
-        ::-webkit-scrollbar-thumb {
-            background: #9D8189;
-            border-radius: 10px;
-            border: 2px solid #f1f1f1;
+        body::-webkit-scrollbar-track {
+            background: var(--sb-track-color);
+            border-radius: 3px;
         }
 
-        ::-webkit-scrollbar-thumb:hover {
-            background: #7a6b73;
+        body::-webkit-scrollbar-thumb {
+            background: var(--sb-thumb-color);
+            border-radius: 3px;
         }
 
-        /* Firefox */
-        * {
-            scrollbar-width: thin;
-            scrollbar-color: #9D8189 #f1f1f1;
+        @supports not selector(::-webkit-scrollbar) {
+            body {
+                scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+            }
         }
     </style>
 </head>
@@ -403,9 +404,9 @@
             theme: {
                 extend: {
                     colors: {
-                        'primary': '#9D8189', /* Muted Rose/Mauve for accents */
-                        'secondary': '#E3B5A4', /* Soft Beige/Peach */
-                        'background-light': '#F8F5F2',
+                        'primary': '#556B2F', /* Olive green for accents */
+                        'secondary': '#D4EDDA', /* Light pastel green */
+                        'background-light': '#FFFACD', /* Pastel yellow for light backgrounds */
                         'text-dark': '#333333',
                     },
                 }
@@ -571,14 +572,13 @@
             <div class="overlay"></div>
 
             <div class="relative z-10 p-8 rounded-lg max-w-4xl">
-                <p class="text-secondary text-lg sm:text-xl tracking-widest uppercase mb-4 font-body">Photowalaa, Hubli
-                </p>
-                <h2 class="text-4xl sm:text-8xl font-display font-bold text-white leading-tight">
+                <!-- <h2 class="text-2xl sm:text-6xl font-display font-bold text-white leading-tight">
                     -"WE FREEZE MOMENTS"-
-                </h2>
-                <p class="text-white text-xl sm:text-2xl mt-4 font-light max-w-2xl mx-auto">
+                </h2> -->
+                <img src="photos/photowalla logo copy png.png" alt="Photowalaa, Hubli" class="h-128 sm:h-96 mb-4 block mx-auto">
+                <!-- <p class="text-white text-xl sm:text-xl mt-4 font-light max-w-2xl mx-auto">
                     Capturing Real Moments, Raw Emotions, and Timeless Memories.
-                </p>
+                </p> -->
                 <a href="#contact"
                     class="mt-8 inline-block bg-primary text-white text-lg font-semibold px-8 py-3 rounded-full hover:bg-primary/80 transition duration-300 shadow-xl hover:shadow-2xl blob-btn"
                     style="transition: transform 0.3s ease, box-shadow 0.3s ease;"
@@ -647,7 +647,7 @@
                     <!-- Service 4 ( Cinematic Wedding Films) -->
                     <div class=" p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300" style="background-image: url('photos/wedding/1.png'); background-size: cover; background-position: center; background-blend-mode: overlay; background-color: rgba(248, 245, 242, 0.8);">
                         <h4 class="font-display text-2xl font-bold mb-2">Cinematic Wedding Films</h4>
-                        <p class="text-gray-600">
+                        <p class="text-gray-600">Immerse your guests in the magic of your wedding with our cinematic films, featuring stunning visuals, emotional storytelling, and professional editing.</p>
                     </div>
                     <!-- Service 5 (Drone) -->
                      <div class=" p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300" style="background-image: url('photos/wedding/2.png'); background-size: cover; background-position: center; background-blend-mode: overlay; background-color: rgba(248, 245, 242, 0.8);">
@@ -659,13 +659,13 @@
                      <div class=" p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300" style="background-image: url('photos/wedding/3.png'); background-size: cover; background-position: center; background-blend-mode: overlay; background-color: rgba(248, 245, 242, 0.8);">
                         <span class="text-primary text-3xl mb-3 block">🎁</span>
                         <h4 class="font-display text-2xl font-bold mb-2">Customized Wedding Albums</h4>
-                        <p class="text-gray-600"></p>
+                        <p class="text-gray-600">Personalized wedding albums designed to showcase your favorite moments in elegant, high-quality layouts.</p>
                     </div>
                     <!--Service 7 (FREE PHOTO FRAME AND MAGZINE)-->
                     <div class=" p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300" style="background-image: url('photos/prewedding/1.png'); background-size: cover; background-position: center; background-blend-mode: overlay; background-color: rgba(248, 245, 242, 0.8);">
                         <span class="text-primary text-3xl mb-3 block">🎁</span>
                         <h4 class="font-display text-2xl font-bold mb-2">FREE PHOTO FRAME AND MAGZINE</h4>
-                        <p class="text-gray-600">(only for 3 package)</p>
+                        <p class="text-gray-600">Exclusive freebies for our Deluxe package: a custom photo frame and a magazine-style photo book to cherish forever. (only for Deluxe package)</p>
                     </div>
                 </div>
 
@@ -795,7 +795,7 @@
                         <div class="video-card">
                             <div class="video-container rounded-xl shadow-2xl overflow-hidden">
                                 <iframe width="100%" height="auto"
-                                    src=""
+                                    src="https://www.youtube.com/embed/ctvOYx4WJ1Q"
                                     title="YouTube video player 2" frameborder="0"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                     allowfullscreen></iframe>
@@ -942,11 +942,11 @@
                             Follow our to instagram to see our latest wedding films, pre-wedding
                             trailers, and behind-the-scenes content!
                         </p>
-                        <a href="https://www.instagram.com/rahul_kallapur?igsh=MXhpMzhqenhza3BrOQ==" target="_blank"
+                        <a href="https://www.instagram.com/photowalaa___?igsh=MXdidzRwaW9xcThzMA==" target="_blank"
                             class="w-full inline-block text-center bg-gradient-to-r from-pink-500 to-purple-500 text-white font-semibold py-3 rounded-lg hover:from-pink-600 hover:to-purple-600 transition duration-300 shadow-md hover:shadow-lg">
-                            <img src="photos/instagram.png" alt="Instagram Logo" class="inline w-6 h-6 mr-2">@rahul_kallapur 
+                            <img src="photos/instagram.png" alt="Instagram Logo" class="inline w-6 h-6 mr-2">@photowalaa___
                         </a>
-                        <p class="text-sm text-gray-500 mt-3 text-center">Instagram/@rahul_kallapur</p>
+                        <p class="text-sm text-gray-500 mt-3 text-center">Instagram/@photowalaa___</p>
                     </div>
                 </div>
             </div>
@@ -1098,7 +1098,7 @@
                     <!-- Placeholder Image for Rahul Kallapur -->
                     <div class="w-full max-w-sm mx-auto rounded-full overflow-hidden shadow-2xl aspect-square"
                         style="background-image: url('photos/founder.png'); background-size: cover; background-position: center;">
-                        <img src="photos/2.png" alt="Portrait of Rahul Kallapur, Founder"
+                        <img src="photos/founder.png" alt="Portrait of Rahul Kallapur, Founder"
                             class="opacity-0 w-full h-full object-cover">
                     </div>
                 </div>
@@ -1194,6 +1194,44 @@
                         @PHOTOWALAA (Instagram)
                     </a>
                     <p class="text-xs text-gray-400 mt-4 italic">30% advance required for booking confirmation.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- GET IN TOUCH SECTION -->
+        <section id="get-in-touch" class="snap-section bg-background-light p-10 sm:p-20">
+            <div class="max-w-6xl mx-auto">
+                <p class="text-center text-primary text-sm tracking-widest uppercase mb-2">Get In Touch</p>
+                <h3 class="text-4xl sm:text-5xl font-display font-semibold text-text-dark text-center mb-12">
+                    GET IN TOUCH
+                </h3>
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <!-- Left Column -->
+                    <div>
+                        <h4 class="text-2xl font-display font-bold text-primary mb-2">OUR LOCATION</h4>
+                        <p class="text-lg text-gray-600 mb-6">Just around the Corner</p>
+                        <ul class="space-y-4 text-lg text-gray-600">
+                            <li class="flex items-start">
+                                <span class="text-primary mr-3 text-xl">📍</span>
+                                <div>Address: KARNATAKA CIRCLE (NH 218), Neelanagar, Hubballi, Karnataka 580025</div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-primary mr-3 text-xl">📱</span>
+                                <div>Mobile: +91 972379359</div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-primary mr-3 text-xl">✉️</span>
+                                <div>Email: info@sanjanacomputers.com</div>
+                            </li>
+                        </ul>
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=KARNATAKA+CIRCLE+(NH+218),+Neelanagar,+Hubballi,+Karnataka+580025" target="_blank" class="mt-6 inline-block bg-primary text-white px-6 py-3 rounded-full hover:bg-primary/80 transition duration-300 shadow-lg hover:shadow-xl">GET DIRECTIONS</a>
+                    </div>
+                    <!-- Right Column -->
+                    <div>
+                        <div class="aspect-video w-full rounded-xl overflow-hidden shadow-2xl">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3826.123456789012!2d75.123456789!3d15.123456789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb8d7e2f4b5c6d7%3A0x123456789abcdef!2sKARNATAKA+CIRCLE+(NH+218)%2C+Neelanagar%2C+Hubballi%2C+Karnataka+580025!5e0!3m2!1sen!2sin!4v1234567890!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

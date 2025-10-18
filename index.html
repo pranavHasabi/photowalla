@@ -53,7 +53,7 @@
             display: flex;
             height: 100%;
             /* Double width to hold original and duplicated content for seamless loop */
-            width: 200vw;
+            width: 240vw;
             animation: scroll-left-grid 60s linear infinite;
         }
 
@@ -249,6 +249,47 @@
             }
         }
 
+        /* Custom styles for photo scroll */
+        .photo-scroll-wrapper {
+            display: flex;
+            width: 200vw;
+            /* Double width for looping */
+            animation: scroll-photo-left 40s linear infinite;
+        }
+
+        @keyframes scroll-photo-left {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .photo-card {
+            flex: 0 0 20%;
+            /* Show 5 photos at a time on desktop */
+            min-width: 200px;
+            padding: 0 8px;
+            /* Gutter space */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .photo-card:hover {
+            transform: scale(1.08);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .photo-card {
+                flex: 0 0 60%;
+                /* Show 1.67 photos on mobile, more compact */
+            }
+        }
+
         /* Page Load Animation */
         body {
             animation: pageLoad 1.5s ease-out;
@@ -276,10 +317,85 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+        /* Smooth Button Hover Animations */
+        .btn-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .btn-hover:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Nav Link Underline Animation */
+        .nav-link {
+            position: relative;
+            text-decoration: none;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 50%;
+            background-color: #9D8189; /* primary color */
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover::after,
+        .nav-link:active::after,
+        .nav-link:focus::after {
+            width: 100%;
+            left: 0;
+        }
+
+        /* Scroll Progress Bar */
+        #scroll-progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 4px;
+            background-color: #9D8189;
+            z-index: 1000;
+            transition: width 0.3s ease;
+        }
+
+        /* Custom Scroll Bar */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #9D8189;
+            border-radius: 10px;
+            border: 2px solid #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #7a6b73;
+        }
+
+        /* Firefox */
+        * {
+            scrollbar-width: thin;
+            scrollbar-color: #9D8189 #f1f1f1;
+        }
     </style>
 </head>
 
 <body class="font-body text-gray-800 bg-white">
+
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress-bar"></div>
 
     <!-- Tailwind Config for custom colors/styles -->
     <script>
@@ -311,22 +427,34 @@
                 <span>PHOTOWALAA</span>
             </a>
             <div class="flex items-center space-x-4 hidden md:flex text-text-dark text-sm font-semibold">
-                <a href="#home" class="px-3 py-1 hover:text-primary transition duration-300">HOME</a>
-                <a href="#about" class="px-3 py-1 hover:text-primary transition duration-300">ABOUT</a>
-                <a href="#services" class="px-3 py-1 hover:text-primary transition duration-300">OFFERINGS</a>
-                <a href="#portfolio" class="px-3 py-1 hover:text-primary transition duration-300">PORTFOLIO</a>
+                <a href="#home" class="nav-link px-3 py-1 hover:text-primary transition duration-300">HOME</a>
+                <a href="#about" class="nav-link px-3 py-1 hover:text-primary transition duration-300">ABOUT</a>
+                <a href="#services" class="nav-link px-3 py-1 hover:text-primary transition duration-300">OFFERINGS</a>
+                <a href="#portfolio" class="nav-link px-3 py-1 hover:text-primary transition duration-300">PORTFOLIO</a>
                 <a href="#contact"
-                    class="px-3 py-1 border-2 border-primary text-primary rounded-full hover:bg-primary hover:text-white transition duration-300 shadow-md hover:shadow-lg">BOOK
+                    class="btn-hover px-3 py-1 border-2 border-primary text-primary rounded-full hover:bg-primary hover:text-white transition duration-300 shadow-md hover:shadow-lg">BOOK
                     NOW</a>
             </div>
             <!-- Mobile Menu Icon (Hamburger) -->
-            <button class="md:hidden text-text-dark text-xl focus:outline-none">
+            <button id="mobile-menu-button" class="md:hidden text-text-dark text-xl focus:outline-none">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
                     </path>
                 </svg>
             </button>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden absolute top-full left-0 w-full bg-white/90 backdrop-blur-sm shadow-md hidden">
+                <div class="flex flex-col items-center space-y-4 py-4 text-text-dark text-sm font-semibold">
+                    <a href="#home" class="nav-link px-3 py-1 hover:text-primary transition duration-300">HOME</a>
+                    <a href="#about" class="nav-link px-3 py-1 hover:text-primary transition duration-300">ABOUT</a>
+                    <a href="#services" class="nav-link px-3 py-1 hover:text-primary transition duration-300">OFFERINGS</a>
+                    <a href="#portfolio" class="nav-link px-3 py-1 hover:text-primary transition duration-300">PORTFOLIO</a>
+                    <a href="#contact"
+                        class="btn-hover px-3 py-1 border-2 border-primary text-primary rounded-full hover:bg-primary hover:text-white transition duration-300 shadow-md hover:shadow-lg">BOOK
+                        NOW</a>
+                </div>
+            </div>
         </nav>
     </header>
 
@@ -340,38 +468,38 @@
                     <!-- BEGIN ORIGINAL IMAGE SET (A full screen's worth of content) -->
 
                     <!-- Column Set 1 (Wide, 1/2 + 1/2 split) -->
-                    <div class="grid-column-set w-[25vw] sm:w-[15vw]">
+                    <div class="grid-column-set w-[30vw] sm:w-[18vw]">
                         <div class="grid-item h-1-2"><img src="photos/prewedding/1.png"
                                 alt="Pre-wedding couple portrait"></div>
                         <div class="grid-item h-1-2"><img src="photos/wedding/1.png"
                                 alt="Wedding ceremony moment"></div>
                     </div>
                     <!-- Column Set 2 (Narrow, Single Tall) -->
-                    <div class="grid-column-set w-[15vw] sm:w-[8vw]">
+                    <div class="grid-column-set w-[18vw] sm:w-[10vw]">
                         <div class="grid-item h-full"><img src="photos/about us.png"
                                 alt="Emotional couple embrace"></div>
                     </div>
                     <!-- Column Set 3 (Standard, 2/5 + 3/5 split) -->
-                    <div class="grid-column-set w-[30vw] sm:w-[20vw]">
+                    <div class="grid-column-set w-[36vw] sm:w-[24vw]">
                         <div class="grid-item h-2-5"><img src="photos/prewedding/2.png"
                                 alt="Pre-wedding shoot detail"></div>
                         <div class="grid-item h-3-5"><img src="photos/wedding/2.png"
                                 alt="Wedding celebration scene"></div>
                     </div>
                     <!-- Column Set 4 (Medium, 1/3 + 2/3 split) -->
-                    <div class="grid-column-set w-[20vw] sm:w-[12vw]">
+                    <div class="grid-column-set w-[24vw] sm:w-[15vw]">
                         <div class="grid-item h-1-3"><img src="photos/other events/1.png"
                                 alt="Special event photography"></div>
                         <div class="grid-item h-2-3"><img src="photos/prewedding/3.png"
                                 alt="Romantic pre-wedding moment"></div>
                     </div>
                     <!-- Column Set 5 (Narrow, Single Tall) -->
-                    <div class="grid-column-set w-[15vw] sm:w-[8vw]">
+                    <div class="grid-column-set w-[18vw] sm:w-[10vw]">
                         <div class="grid-item h-full"><img src="photos/founder.png"
                                 alt="Founder portrait"></div>
                     </div>
                     <!-- Column Set 6 (Wide, 1/3 + 1/3 + 1/3 split) -->
-                    <div class="grid-column-set w-[30vw] sm:w-[20vw]">
+                    <div class="grid-column-set w-[36vw] sm:w-[24vw]">
                         <div class="grid-item h-1-3"><img src="photos/wedding/3.png"
                                 alt="Traditional wedding portrait"></div>
                         <div class="grid-item h-1-3"><img src="photos/other events/2.png"
@@ -380,14 +508,14 @@
                                 alt="Ceremony detail shot"></div>
                     </div>
                     <!-- Column Set 7 (Standard, 1/2 + 1/2 split) -->
-                    <div class="grid-column-set w-[25vw] sm:w-[15vw]">
+                    <div class="grid-column-set w-[30vw] sm:w-[18vw]">
                         <div class="grid-item h-1-2"><img src="photos/prewedding/1.png"
                                 alt="Couple in love"></div>
                         <div class="grid-item h-1-2"><img src="photos/wedding/1.png"
                                 alt="Wedding joy captured"></div>
                     </div>
                     <!-- Column Set 8 (Medium, 3/5 + 2/5 split) -->
-                    <div class="grid-column-set w-[20vw] sm:w-[12vw]">
+                    <div class="grid-column-set w-[24vw] sm:w-[15vw]">
                         <div class="grid-item h-3-5"><img src="photos/about us.png"
                                 alt="Authentic emotion"></div>
                         <div class="grid-item h-2-5"><img src="photos/founder.png"
@@ -397,38 +525,38 @@
                     <!-- BEGIN DUPLICATE IMAGE SET (for seamless looping) -->
 
                     <!-- Column Set 1 D (Wide, 1/2 + 1/2 split) -->
-                    <div class="grid-column-set w-[25vw] sm:w-[15vw]">
+                    <div class="grid-column-set w-[20vw] sm:w-[24vw] md:w-[32vw] lg:w-[40vw]">
                         <div class="grid-item h-1-2"><img src="https://placehold.co/400x300/E3B5A4/4a4e69?text=C1-A-D"
                                 alt="Grid Image 1A D"></div>
                         <div class="grid-item h-1-2"><img src="https://placehold.co/400x300/9D8189/ffffff?text=C1-B-D"
                                 alt="Grid Image 1B D"></div>
                     </div>
                     <!-- Column Set 2 D (Narrow, Single Tall) -->
-                    <div class="grid-column-set w-[15vw] sm:w-[8vw]">
+                    <div class="grid-column-set w-[12vw] sm:w-[14vw] md:w-[18vw] lg:w-[24vw]">
                         <div class="grid-item h-full"><img src="https://placehold.co/200x600/4a4e69/E3B5A4?text=C2-D"
                                 alt="Grid Image 2 D"></div>
                     </div>
                     <!-- Column Set 3 D (Standard, 2/5 + 3/5 split) -->
-                    <div class="grid-column-set w-[30vw] sm:w-[20vw]">
+                    <div class="grid-column-set w-[24vw] sm:w-[32vw] md:w-[40vw] lg:w-[48vw]">
                         <div class="grid-item h-2-5"><img src="https://placehold.co/600x200/F8F5F2/9D8189?text=C3-A-D"
                                 alt="Grid Image 3A D"></div>
                         <div class="grid-item h-3-5"><img src="https://placehold.co/600x400/333333/E3B5A4?text=C3-B-D"
                                 alt="Grid Image 3B D"></div>
                     </div>
                     <!-- Column Set 4 D (Medium, 1/3 + 2/3 split) -->
-                    <div class="grid-column-set w-[20vw] sm:w-[12vw]">
+                    <div class="grid-column-set w-[16vw] sm:w-[20vw] md:w-[26vw] lg:w-[32vw]">
                         <div class="grid-item h-1-3"><img src="https://placehold.co/300x150/E3B5A4/4a4e69?text=C4-A-D"
                                 alt="Grid Image 4A D"></div>
                         <div class="grid-item h-2-3"><img src="https://placehold.co/300x450/9D8189/ffffff?text=C4-B-D"
                                 alt="Grid Image 4B D"></div>
                     </div>
                     <!-- Column Set 5 D (Narrow, Single Tall) -->
-                    <div class="grid-column-set w-[15vw] sm:w-[8vw]">
+                    <div class="grid-column-set w-[12vw] sm:w-[14vw] md:w-[18vw] lg:w-[24vw]">
                         <div class="grid-item h-full"><img src="https://placehold.co/200x600/4a4e69/E3B5A4?text=C5-D"
                                 alt="Grid Image 5 D"></div>
                     </div>
                     <!-- Column Set 6 D (Wide, 1/3 + 1/3 + 1/3 split) -->
-                    <div class="grid-column-set w-[30vw] sm:w-[20vw]">
+                    <div class="grid-column-set w-[24vw] sm:w-[32vw] md:w-[40vw] lg:w-[48vw]">
                         <div class="grid-item h-1-3"><img src="https://placehold.co/600x200/F8F5F2/9D8189?text=C6-A-D"
                                 alt="Grid Image 6A D"></div>
                         <div class="grid-item h-1-3"><img src="https://placehold.co/600x200/333333/E3B5A4?text=C6-B-D"
@@ -452,7 +580,10 @@
                     Capturing Real Moments, Raw Emotions, and Timeless Memories.
                 </p>
                 <a href="#contact"
-                    class="mt-8 inline-block bg-primary text-white text-lg font-semibold px-8 py-3 rounded-full hover:bg-primary/80 transition duration-300 shadow-xl hover:shadow-2xl">
+                    class="mt-8 inline-block bg-primary text-white text-lg font-semibold px-8 py-3 rounded-full hover:bg-primary/80 transition duration-300 shadow-xl hover:shadow-2xl blob-btn"
+                    style="transition: transform 0.3s ease, box-shadow 0.3s ease;"
+                    onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.2)';"
+                    onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='';">
                     Inquire for Your Wedding Story
                 </a>
             </div>
@@ -467,8 +598,8 @@
                     More than Photography, We're Storytellers.
                 </h3>
                 <p class="text-lg text-gray-600 mb-6 leading-relaxed">
-                    **Photowalaa** isn't just a wedding photography company — we’re storytellers. Based in **[HUBLI]**,
-                    we specialize in capturing **real moments, raw emotions, and timeless memories.**
+                    Photowalaa isn't just a wedding photography company — we’re storytellers. Based in [HUBLI],
+                    we specialize in capturing real moments, raw emotions, and timeless memories.
                 </p>
                 <p class="text-lg text-gray-600 leading-relaxed border-l-4 border-primary pl-4 italic">
                     Whether it's the stolen glances, heartfelt hugs, or wild dance moves, we freeze those
@@ -496,48 +627,44 @@
 
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Service 1 -->
-                    <div class="bg-background-light p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
-                        <span class="text-primary text-3xl mb-3 block">📸</span>
+                     <div class=" p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300" style="background-image: url('photos/prewedding/1.png'); background-size: cover; background-position: center; background-blend-mode: overlay; background-color: rgba(248, 245, 242, 0.8);">
                         <h4 class="font-display text-2xl font-bold mb-2">Candid Wedding Photography</h4>
                         <p class="text-gray-600">Our signature approach: capturing spontaneous, unposed moments that
                             define your relationship and the energy of the day.</p>
                     </div>
                     <!-- Service 2 -->
-                    <div class="bg-background-light p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
-                        <span class="text-primary text-3xl mb-3 block">🎬</span>
+                     <div class=" p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300" style="background-image: url('photos/prewedding/2.png'); background-size: cover; background-position: center; background-blend-mode: overlay; background-color: rgba(248, 245, 242, 0.8);">
                         <h4 class="font-display text-2xl font-bold mb-2">Traditional Photography & Videography</h4>
                         <p class="text-gray-600">A high-quality, emotionally resonant film that tells the complete story
                             of your wedding day with flair and style.</p>
                     </div>
                     <!-- Service 3 -->
-                    <div class=" p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300" style="background-image: url('photos/prewedding/1.png'); background-size: cover; background-position: center; background-blend-mode: overlay; background-color: rgba(248, 245, 242, 0.8);">
+                    <div class=" p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300" style="background-image: url('photos/prewedding/3.png'); background-size: cover; background-position: center; background-blend-mode: overlay; background-color: rgba(248, 245, 242, 0.8);">
                         <h4 class="font-display text-2xl font-bold mb-2">Pre-Wedding Shoots</h4>
                         <p class="text-gray-600">Personalized sessions, like the 'Retrostyle Prewedding,' designed to
                             capture your unique chemistry before the big day.</p>
                     </div>
                     <!-- Service 4 ( Cinematic Wedding Films) -->
-                    <div class="bg-background-light p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
-                        <span class="text-primary text-3xl mb-3 block">👨‍👩‍👧‍👦</span>
-                        <h4 class="font-display text-2xl font-bold mb-2"> Cinematic Wedding Films</h4>
-                        <p class="text-gray-600"></p>
+                    <div class=" p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300" style="background-image: url('photos/wedding/1.png'); background-size: cover; background-position: center; background-blend-mode: overlay; background-color: rgba(248, 245, 242, 0.8);">
+                        <h4 class="font-display text-2xl font-bold mb-2">Cinematic Wedding Films</h4>
+                        <p class="text-gray-600">
                     </div>
                     <!-- Service 5 (Drone) -->
-                    <div class="bg-background-light p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
-                        <span class="text-primary text-3xl mb-3 block">🚁</span>
+                     <div class=" p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300" style="background-image: url('photos/wedding/2.png'); background-size: cover; background-position: center; background-blend-mode: overlay; background-color: rgba(248, 245, 242, 0.8);">
                         <h4 class="font-display text-2xl font-bold mb-2">Drone Coverage</h4>
                         <p class="text-gray-600">Breathtaking aerial views to add a grand, sweeping perspective to your
                             film and photography collection.</p>
                     </div>
                     <!-- Service 6 ( Customized Wedding Albums) -->
-                    <div class="bg-background-light p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                     <div class=" p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300" style="background-image: url('photos/wedding/3.png'); background-size: cover; background-position: center; background-blend-mode: overlay; background-color: rgba(248, 245, 242, 0.8);">
                         <span class="text-primary text-3xl mb-3 block">🎁</span>
-                        <h4 class="font-display text-2xl font-bold mb-2"> Customized Wedding Albums</h4>
+                        <h4 class="font-display text-2xl font-bold mb-2">Customized Wedding Albums</h4>
                         <p class="text-gray-600"></p>
                     </div>
                     <!--Service 7 (FREE PHOTO FRAME AND MAGZINE)-->
-                    <div class="bg-background-light p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                    <div class=" p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300" style="background-image: url('photos/prewedding/1.png'); background-size: cover; background-position: center; background-blend-mode: overlay; background-color: rgba(248, 245, 242, 0.8);">
                         <span class="text-primary text-3xl mb-3 block">🎁</span>
-                        <h4 class="font-display text-2xl font-bold mb-2"> FREE PHOTO FRAME AND MAGZINE</h4>
+                        <h4 class="font-display text-2xl font-bold mb-2">FREE PHOTO FRAME AND MAGZINE</h4>
                         <p class="text-gray-600">(only for 3 package)</p>
                     </div>
                 </div>
@@ -560,37 +687,89 @@
                 <!-- Photo Gallery Grid -->
                 <h4 class="text-3xl font-display font-semibold text-text-dark mb-6 border-b border-primary/50 pb-2">
                     Photography Highlights</h4>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    <!-- Image 1 -->
-                    <a href="#"
-                        class="group block overflow-hidden rounded-lg shadow-xl hover:shadow-2xl transition duration-300">
-                        <img src="photos/prewedding/1.png" alt="Pre-Wedding Photo"
-                            class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500 aspect-[2/3]">
-                    </a>
-                    <!-- Image 2 -->
-                    <a href="#"
-                        class="group block overflow-hidden rounded-lg shadow-xl hover:shadow-2xl transition duration-300">
-                        <img src="photos/wedding/1.png" alt="Wedding Shoot"
-                            class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500 aspect-[2/3]">
-                    </a>
-                    <!-- Image 3 (Longer aspect ratio for desktop view) -->
-                    <a href="#"
-                        class="group block overflow-hidden rounded-lg shadow-xl hover:shadow-2xl transition duration-300 md:col-span-2">
-                        <img src="photos/about us.png" alt="Heartfelt Hug"
-                            class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500 aspect-[2/3]">
-                    </a>
-                    <!-- Image 4 -->
-                    <a href="#"
-                        class="group block overflow-hidden rounded-lg shadow-xl hover:shadow-2xl transition duration-300">
-                        <img src="photos/other events/3.png" alt="Ceremony Detail Shot"
-                            class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500 aspect-[2/3]">
-                    </a>
-                    <!-- Image 5 -->
-                    <a href="#"
-                        class="group block overflow-hidden rounded-lg shadow-xl hover:shadow-2xl transition duration-300">
-                        <img src="photos/wedding/3.png" alt="Traditional Couple Portrait"
-                            class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500 aspect-[2/3]">
-                    </a>
+                <div class="w-full overflow-hidden mb-8">
+                    <div class="photo-scroll-wrapper py-4">
+                        <!-- Original Set 1: 2 small on top, 1 large on bottom -->
+                        <div class="photo-card">
+                            <div class="grid grid-cols-2 gap-4">
+                                <a href="#"
+                                    class="group block overflow-hidden rounded-lg shadow-xl hover:shadow-2xl transition duration-300 col-span-1">
+                                    <img src="photos/prewedding/1.png" alt="Pre-Wedding Photo"
+                                        class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500 aspect-[5/3]">
+                                </a>
+                                <a href="#"
+                                    class="group block overflow-hidden rounded-lg shadow-xl hover:shadow-2xl transition duration-300 col-span-1">
+                                    <img src="photos/wedding/1.png" alt="Wedding Shoot"
+                                        class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500 aspect-[5/3]">
+                                </a>
+                                <a href="#"
+                                    class="group block overflow-hidden rounded-lg shadow-xl hover:shadow-2xl transition duration-300 col-span-2">
+                                    <img src="photos/about us.png" alt="Heartfelt Hug"
+                                        class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500 aspect-[16/9]">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Original Set 2: 1 large on top, 2 small on bottom -->
+                        <div class="photo-card">
+                            <div class="grid grid-cols-2 gap-4">
+                                <a href="#"
+                                    class="group block overflow-hidden rounded-lg shadow-xl hover:shadow-2xl transition duration-300 col-span-2">
+                                    <img src="photos/other events/3.png" alt="Ceremony Detail Shot"
+                                        class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500 aspect-[16/9]">
+                                </a>
+                                <a href="#"
+                                    class="group block overflow-hidden rounded-lg shadow-xl hover:shadow-2xl transition duration-300 col-span-1">
+                                    <img src="photos/wedding/3.png" alt="Traditional Couple Portrait"
+                                        class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500 aspect-[5/3]">
+                                </a>
+                                <a href="#"
+                                    class="group block overflow-hidden rounded-lg shadow-xl hover:shadow-2xl transition duration-300 col-span-1">
+                                    <img src="photos/prewedding/2.png" alt="Additional Photo"
+                                        class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500 aspect-[5/3]">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Duplicate Set 1 for seamless loop -->
+                        <div class="photo-card">
+                            <div class="grid grid-cols-2 gap-4">
+                                <a href="#"
+                                    class="group block overflow-hidden rounded-lg shadow-xl hover:shadow-2xl transition duration-300 col-span-1">
+                                    <img src="photos/prewedding/1.png" alt="Pre-Wedding Photo"
+                                        class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500 aspect-[5/3]">
+                                </a>
+                                <a href="#"
+                                    class="group block overflow-hidden rounded-lg shadow-xl hover:shadow-2xl transition duration-300 col-span-1">
+                                    <img src="photos/wedding/1.png" alt="Wedding Shoot"
+                                        class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500 aspect-[5/3]">
+                                </a>
+                                <a href="#"
+                                    class="group block overflow-hidden rounded-lg shadow-xl hover:shadow-2xl transition duration-300 col-span-2">
+                                    <img src="photos/about us.png" alt="Heartfelt Hug"
+                                        class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500 aspect-[16/9]">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Duplicate Set 2 for seamless loop -->
+                        <div class="photo-card">
+                            <div class="grid grid-cols-2 gap-4">
+                                <a href="#"
+                                    class="group block overflow-hidden rounded-lg shadow-xl hover:shadow-2xl transition duration-300 col-span-2">
+                                    <img src="photos/other events/3.png" alt="Ceremony Detail Shot"
+                                        class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500 aspect-[16/9]">
+                                </a>
+                                <a href="#"
+                                    class="group block overflow-hidden rounded-lg shadow-xl hover:shadow-2xl transition duration-300 col-span-1">
+                                    <img src="photos/wedding/3.png" alt="Traditional Couple Portrait"
+                                        class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500 aspect-[5/3]">
+                                </a>
+                                <a href="#"
+                                    class="group block overflow-hidden rounded-lg shadow-xl hover:shadow-2xl transition duration-300 col-span-1">
+                                    <img src="photos/prewedding/2.png" alt="Additional Photo"
+                                        class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500 aspect-[5/3]">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Video Showcase -->
@@ -850,7 +1029,7 @@
                             <li class="flex items-center"><span class="mr-2">✓</span> Premium Album + USB</li>
                             <li class="flex items-center"><span class="mr-2">✓</span> Drone Coverage</li>
                         </ul>
-                        <a href="#contact" class="inline-block bg-white text-primary px-6 py-3 rounded-full hover:bg-gray-100 transition duration-300 font-semibold">Book Now</a>
+                        <a href="#contact" class="inline-block bg-white text-primary px-6 py-3 rounded-full hover:bg-gray-100 transition duration-300 font-semibold blob-btn" style="transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.2)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='';">Book Now</a>
                     </div>
 
                     <!-- Package 3: Deluxe -->
@@ -889,20 +1068,20 @@
                     <ul class="space-y-4 text-lg text-gray-600">
                         <li class="flex items-start">
                             <span class="text-primary mr-3 text-xl">&check;</span>
-                            <div>**Professional & Passionate Team:** Led by our founder, Rahul Kallapur.</div>
+                            <div>Professional & Passionate Team: Led by our founder, Rahul Kallapur.</div>
                         </li>
                         <li class="flex items-start">
                             <span class="text-primary mr-3 text-xl">&check;</span>
-                            <div>**State-of-the-art Equipment:** Ensuring crystal-clear, high-quality deliverables.
+                            <div>State-of-the-art Equipment: Ensuring crystal-clear, high-quality deliverables.
                             </div>
                         </li>
                         <li class="flex items-start">
                             <span class="text-primary mr-3 text-xl">&check;</span>
-                            <div>**Quick Turnaround Time:** Edited photos and videos delivered within 60-90 days.</div>
+                            <div>Quick Turnaround Time: Edited photos and videos delivered within 60-90 days.</div>
                         </li>
                         <li class="flex items-start">
                             <span class="text-primary mr-3 text-xl">&check;</span>
-                            <div>**Tailor-made Packages:** Custom solutions designed for your unique needs.</div>
+                            <div>Tailor-made Packages: Custom solutions designed for your unique needs.</div>
                         </li>
                     </ul>
                     <!-- Founder Bio Snippet -->
@@ -1039,7 +1218,7 @@
 
             <h4 class="text-xl font-semibold text-primary mt-4 mb-2">1. Booking & Payments</h4>
             <ul class="list-disc ml-6 text-gray-700 space-y-1">
-                <li>A minimum of **30% advance** is required to confirm the booking.</li>
+                <li>A minimum of 30% advance is required to confirm the booking.</li>
                 <li>50% amount is due after the event.</li>
                 <li>The remaining amount must be cleared before the final delivery of photos/videos.</li>
                 <li>Booking is confirmed only after receipt of the advance and a signed agreement or confirmation
@@ -1048,32 +1227,32 @@
 
             <h4 class="text-xl font-semibold text-primary mt-4 mb-2">2. Cancellation & Refund</h4>
             <ul class="list-disc ml-6 text-gray-700 space-y-1">
-                <li>If the client cancels the booking **30 days prior** to the event date, **50% of the advance** will
+                <li>If the client cancels the booking 30 days prior to the event date, 50% of the advance will
                     be refunded.</li>
-                <li>If the cancellation is made **less than 30 days** before the event, the advance is
-                    **non-refundable**.</li>
-                <li>In case of unforeseen circumstances from Photowalaa's side, a **full refund** will be issued or an
+                <li>If the cancellation is made less than 30 days before the event, the advance is
+                    non-refundable.</li>
+                <li>In case of unforeseen circumstances from Photowalaa's side, a full refund will be issued or an
                     alternative arrangement will be provided.</li>
             </ul>
 
             <h4 class="text-xl font-semibold text-primary mt-4 mb-2">3. Travel & Accommodation</h4>
             <ul class="list-disc ml-6 text-gray-700 space-y-1">
-                <li>For outstation shoots, the client shall bear the **travel, accommodation, and food expenses** for
+                <li>For outstation shoots, the client shall bear the travel, accommodation, and food expenses for
                     the team.</li>
                 <li>These arrangements must be confirmed and managed at least 7 days before the event.</li>
             </ul>
 
             <h4 class="text-xl font-semibold text-primary mt-4 mb-2">4. Delivery Timeline</h4>
             <ul class="list-disc ml-6 text-gray-700 space-y-1">
-                <li>Raw data (if promised) will be shared within **7-10 working days**.</li>
-                <li>Edited photographs and cinematic videos will be delivered within **60-90 days** from the last day of
+                <li>Raw data (if promised) will be shared within 7-10 working days.</li>
+                <li>Edited photographs and cinematic videos will be delivered within 60-90 days from the last day of
                     the event.</li>
                 <li>Urgent delivery requests may incur additional charges.</li>
             </ul>
 
             <h4 class="text-xl font-semibold text-primary mt-4 mb-2">5. Copyright & Usage</h4>
             <ul class="list-disc ml-6 text-gray-700 space-y-1">
-                <li>Photowalaa retains the **copyright to all images and videos** shot.</li>
+                <li>Photowalaa retains the copyright to all images and videos shot.</li>
                 <li>We reserve the right to use selected images/videos for portfolio, website, social media, and
                     promotional use.</li>
                 <li>Clients can request not to share certain private moments publicly - this must be communicated in
@@ -1090,7 +1269,7 @@
 
             <h4 class="text-xl font-semibold text-primary mt-4 mb-2">7. Changes & Rescheduling</h4>
             <ul class="list-disc ml-6 text-gray-700 space-y-1">
-                <li>Any change in the event date must be informed at least **15 days prior** and is subject to
+                <li>Any change in the event date must be informed at least 15 days prior and is subject to
                     availability.</li>
                 <li>A rescheduling fee may apply in some cases.</li>
             </ul>
@@ -1210,6 +1389,12 @@
             });
         });
 
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
         // Combined DOMContentLoaded for scroll to top and animations
         document.addEventListener('DOMContentLoaded', function () {
             // Scroll to top on page load/reload with smooth animation
@@ -1232,6 +1417,14 @@
             sections.forEach(section => {
                 observer.observe(section);
             });
+        });
+
+        // Scroll Progress Bar Functionality
+        window.addEventListener('scroll', function() {
+            const scrollTop = window.pageYOffset;
+            const docHeight = document.body.scrollHeight - window.innerHeight;
+            const scrollPercent = (scrollTop / docHeight) * 100;
+            document.getElementById('scroll-progress-bar').style.width = scrollPercent + '%';
         });
     </script>
 </body>

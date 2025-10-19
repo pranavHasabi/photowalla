@@ -16,6 +16,42 @@
             --font-body: 'Inter', sans-serif;
             --gutter: 4px;
             /* Space between photos */
+            --phi: 1.618;
+            --base-space: 1rem;
+            --space-phi: calc(var(--base-space) * var(--phi));
+            --space-phi2: calc(var(--space-phi) * var(--phi));
+            --base-font: 1rem;
+            --font-phi: calc(var(--base-font) * var(--phi));
+            --font-phi2: calc(var(--font-phi) * var(--phi));
+            /* Golden ratio-based layout proportions */
+            --width-phi: calc(100vw / var(--phi));
+            --width-phi2: calc(var(--width-phi) / var(--phi));
+            --height-phi: calc(100vh / var(--phi));
+            --height-phi2: calc(var(--height-phi) / var(--phi));
+            /* Animation timings based on phi */
+            --anim-phi: 1.618s;
+            --anim-phi2: calc(var(--anim-phi) * var(--phi));
+            --anim-phi3: calc(var(--anim-phi2) * var(--phi));
+            /* Aspect ratio for images/videos: 1:1.618 */
+            --aspect-phi: calc(1 / var(--phi));
+        }
+
+        .font-phi {
+            font-size: var(--font-phi);
+            line-height: var(--phi);
+        }
+
+        .font-phi2 {
+            font-size: var(--font-phi2);
+            line-height: calc(var(--phi) * 0.9);
+        }
+
+        .p-phi {
+            padding: var(--space-phi);
+        }
+
+        .gap-phi {
+            gap: var(--space-phi);
         }
 
         .font-display {
@@ -426,7 +462,7 @@
             <a href="#home"
                 class="flex items-center space-x-2 text-3xl font-display font-bold text-primary tracking-wider">
                 <!-- Logo Image -->
-                <img src="photos/logo navbar.png" alt="Photowalaa Logo" class="w-8 h-8">
+                <img src="photos/logo navbar.png" alt="Photowalaa Logo" class="w-12 h-8">
                 <span>PHOTOWALAA</span>
             </a>
             <div class="flex items-center space-x-4 hidden md:flex text-text-dark text-sm font-semibold">

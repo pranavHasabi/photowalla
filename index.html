@@ -283,6 +283,9 @@
                 flex: 0 0 60%;
                 /* Show 1.67 videos on mobile, more compact */
             }
+            .snap-section {
+                min-height: 70vh;
+            }
         }
 
         /* Custom styles for photo scroll */
@@ -324,6 +327,122 @@
             .photo-card {
                 flex: 0 0 60%;
                 /* Show 1.67 photos on mobile, more compact */
+            }
+        }
+
+        /* Reduce About Us section size by 30% on mobile */
+@media (max-width: 768px) {
+    #about {
+        padding: 1.75rem;
+    }
+    #about h3 {
+        font-size: 1.575rem;
+    }
+    #testimonials {
+        padding-top: 2.8rem;
+        padding-bottom: 2.8rem;
+    }
+    #testimonials h3 {
+        font-size: 1.575rem;
+    }
+}
+<<<<<<< SEARCH
+    #portfolio .gap-8 {
+        gap: 1.4rem;
+    }
+}
+=======
+    #portfolio .gap-8 {
+        gap: 1.4rem;
+    }
+    #testimonials {
+        padding-top: 4.2rem;
+        padding-bottom: 4.2rem;
+    }
+    #testimonials h3 {
+        font-size: 2.1rem;
+    }
+    #testimonials .grid {
+        gap: 1.4rem;
+    }
+    #testimonials .bg-white {
+        padding: 1.05rem;
+    }
+    #testimonials .bg-white img {
+        width: 3.5rem;
+        height: 3.5rem;
+        margin-bottom: 0.7rem;
+    }
+    #testimonials .bg-white p {
+        font-size: 0.7rem;
+        margin-bottom: 0.7rem;
+    }
+    #testimonials .bg-white p.font-bold {
+        margin-bottom: 0;
+    }
+    #testimonials .bg-white p:last-child {
+        font-size: 0.525rem;
+        margin-bottom: 0;
+    }
+}
+
+        /* Reduce Services/Offerings section internal elements by 30% on mobile and tablet (max-width 1024px) */
+        @media (max-width: 1024px) {
+            #services .grid > div {
+                padding: 1rem; /* Reduced from p-6 (1.5rem) by 30% */
+            }
+            #services h4 {
+                font-size: 1.25rem; /* Reduced from text-2xl (1.5rem) by 30% */
+            }
+            #services .grid {
+                gap: 1.5rem; /* Reduced from gap-8 (2rem) by 30% */
+            }
+            #services h3 {
+                margin-bottom: 2.1rem; /* Reduced from mb-12 (3rem) by 30% */
+                font-size: 1.575rem; /* Reduced from text-4xl (2.25rem) by 30% */
+            }
+            #services .text-center p {
+                font-size: 0.8rem; /* Reduced from text-lg (1.125rem) by 30% */
+                margin-top: 2.1rem; /* Reduced from mt-12 (3rem) by 30% */
+            }
+            #portfolio {
+                padding: 3.5rem;
+                padding-top: 2.8rem;
+            }
+            #portfolio h3 {
+                font-size: 2.1rem;
+                margin-bottom: 2.1rem;
+            }
+            #portfolio h4 {
+                font-size: 1.3125rem;
+                margin-bottom: 1.05rem;
+            }
+            #portfolio h4:nth-of-type(2) {
+                margin-top: 2.1rem;
+            }
+            #portfolio .photo-card {
+                min-height: 245px;
+                padding: 0 5.6px;
+            }
+            #portfolio .photo-card .grid {
+                gap: 0.7rem;
+            }
+            #portfolio .video-card {
+                min-width: 140px;
+                padding: 0 5.6px;
+            }
+            #portfolio .p-6 {
+                padding: 1.05rem;
+            }
+            #portfolio .p-6 h5 {
+                font-size: 1.05rem;
+            }
+            #portfolio .p-6 a {
+                padding-top: 0.525rem;
+                padding-bottom: 0.525rem;
+            }
+            #portfolio .gap-8 {
+                gap: 1.4rem;
             }
         }
 
@@ -458,11 +577,11 @@
 
     <!-- Navigation -->
     <header class="fixed top-0 left-0 w-full z-30 bg-white/90 backdrop-blur-sm shadow-md">
-        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex justify-between items-center">
             <a href="#home"
-                class="flex items-center space-x-2 text-3xl font-display font-bold text-primary tracking-wider">
+                class="flex items-center space-x-2 text-2xl font-display font-bold text-primary tracking-wider">
                 <!-- Logo Image -->
-                <img src="photos/logo navbar.png" alt="Photowalaa Logo" class="w-12 h-8">
+                <img src="photos/logo navbar.png" alt="Photowalaa Logo" class="w-8 h-6">
                 <span>PHOTOWALAA</span>
             </a>
             <div class="flex items-center space-x-4 hidden md:flex text-text-dark text-sm font-semibold">
@@ -610,19 +729,22 @@
             <div class="overlay"></div>
 
             <div class="relative z-10 p-8 rounded-lg max-w-4xl">
-                <!-- <h2 class="text-2xl sm:text-6xl font-display font-bold text-white leading-tight">
+                <img src="photos/hero section/logo.png" alt="Photowalaa, Hubli" class="h-14 sm:h-20 md:h-24 lg:h-28 xl:h-36 2xl:h-40 mb-4 block mx-auto">
+                <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-6xl font-display font-bold text-white leading-tight mb-4">
+                    PHOTOWALLA
+                </h1>
+                <h2 class="text-base sm:text-lg md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-4xl font-display font-bold text-white leading-tight">
                     -"WE FREEZE MOMENTS"-
-                </h2> -->
-                <img src="photos/photowalla logo copy png.png" alt="Photowalaa, Hubli" class="h-128 sm:h-96 mb-4 block mx-auto">
+                </h2>
                 <!-- <p class="text-white text-xl sm:text-xl mt-4 font-light max-w-2xl mx-auto">
                     Capturing Real Moments, Raw Emotions, and Timeless Memories.
                 </p> -->
                 <a href="#contact"
-                    class="mt-8 inline-block bg-primary text-white text-lg font-semibold px-8 py-3 rounded-full hover:bg-primary/80 transition duration-300 shadow-xl hover:shadow-2xl blob-btn"
+                    class="mt-8 inline-block bg-primary text-white text-base font-semibold px-6 py-2 sm:text-lg sm:px-8 sm:py-3 rounded-full hover:bg-primary/80 transition duration-300 shadow-xl hover:shadow-2xl blob-btn"
                     style="transition: transform 0.3s ease, box-shadow 0.3s ease;"
                     onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.2)';"
                     onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='';">
-                    Inquire for Your Wedding Story
+                    Inquire now
                 </a>
             </div>
         </section>
@@ -667,43 +789,43 @@
                     <!-- Service 1 -->
                      <div class="animate-on-scroll p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300" style="background-image: url('photos/prewedding/1.png'); background-size: cover; background-position: center; background-blend-mode: overlay; background-color: rgba(248, 245, 242, 0.8);">
                         <h4 class="font-display text-2xl font-bold mb-2">Candid Wedding Photography</h4>
-                        <p class="text-gray-600">Our signature approach: capturing spontaneous, unposed moments that
-                            define your relationship and the energy of the day.</p>
+                        <!-- <p class="text-gray-600">Our signature approach: capturing spontaneous, unposed moments that
+                            define your relationship and the energy of the day.</p> -->
                     </div>
                     <!-- Service 2 -->
                      <div class="animate-on-scroll p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300" style="background-image: url('photos/prewedding/2.png'); background-size: cover; background-position: center; background-blend-mode: overlay; background-color: rgba(248, 245, 242, 0.8);">
                         <h4 class="font-display text-2xl font-bold mb-2">Traditional Photography & Videography</h4>
-                        <p class="text-gray-600">A high-quality, emotionally resonant film that tells the complete story
-                            of your wedding day with flair and style.</p>
+                        <!-- <p class="text-gray-600">A high-quality, emotionally resonant film that tells the complete story
+                            of your wedding day with flair and style.</p> -->
                     </div>
                     <!-- Service 3 -->
                     <div class="animate-on-scroll p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300" style="background-image: url('photos/prewedding/3.png'); background-size: cover; background-position: center; background-blend-mode: overlay; background-color: rgba(248, 245, 242, 0.8);">
                         <h4 class="font-display text-2xl font-bold mb-2">Pre-Wedding Shoots</h4>
-                        <p class="text-gray-600">Personalized sessions, like the 'Retrostyle Prewedding,' designed to
-                            capture your unique chemistry before the big day.</p>
+                        <!-- <p class="text-gray-600">Personalized sessions, like the 'Retrostyle Prewedding,' designed to
+                            capture your unique chemistry before the big day.</p> -->
                     </div>
                     <!-- Service 4 ( Cinematic Wedding Films) -->
                     <div class="animate-on-scroll p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300" style="background-image: url('photos/wedding/1.png'); background-size: cover; background-position: center; background-blend-mode: overlay; background-color: rgba(248, 245, 242, 0.8);">
                         <h4 class="font-display text-2xl font-bold mb-2">Cinematic Wedding Films</h4>
-                        <p class="text-gray-600">Immerse your guests in the magic of your wedding with our cinematic films, featuring stunning visuals, emotional storytelling, and professional editing.</p>
+                        <!-- <p class="text-gray-600">Immerse your guests in the magic of your wedding with our cinematic films, featuring stunning visuals, emotional storytelling, and professional editing.</p> -->
                     </div>
                     <!-- Service 5 (Drone) -->
                      <div class="animate-on-scroll p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300" style="background-image: url('photos/wedding/2.png'); background-size: cover; background-position: center; background-blend-mode: overlay; background-color: rgba(248, 245, 242, 0.8);">
                         <h4 class="font-display text-2xl font-bold mb-2">Drone Coverage</h4>
-                        <p class="text-gray-600">Breathtaking aerial views to add a grand, sweeping perspective to your
-                            film and photography collection.</p>
+                        <!-- <p class="text-gray-600">Breathtaking aerial views to add a grand, sweeping perspective to your
+                            film and photography collection.</p> -->
                     </div>
                     <!-- Service 6 ( Customized Wedding Albums) -->
                      <div class="animate-on-scroll p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300" style="background-image: url('photos/wedding/3.png'); background-size: cover; background-position: center; background-blend-mode: overlay; background-color: rgba(248, 245, 242, 0.8);">
-                        <span class="text-primary text-3xl mb-3 block">🎁</span>
+                        <!-- <span class="text-primary text-3xl mb-3 block">🎁</span> -->
                         <h4 class="font-display text-2xl font-bold mb-2">Customized Wedding Albums</h4>
-                        <p class="text-gray-600">Personalized wedding albums designed to showcase your favorite moments in elegant, high-quality layouts.</p>
+                        <!-- <p class="text-gray-600">Personalized wedding albums designed to showcase your favorite moments in elegant, high-quality layouts.</p> -->
                     </div>
                     <!--Service 7 (FREE PHOTO FRAME AND MAGZINE)-->
                     <div class="animate-on-scroll p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300" style="background-image: url('photos/prewedding/1.png'); background-size: cover; background-position: center; background-blend-mode: overlay; background-color: rgba(248, 245, 242, 0.8);">
-                        <span class="text-primary text-3xl mb-3 block">🎁</span>
+                        <!-- <span class="text-primary text-3xl mb-3 block">🎁</span> -->
                         <h4 class="font-display text-2xl font-bold mb-2">FREE PHOTO FRAME AND MAGZINE</h4>
-                        <p class="text-gray-600">Exclusive freebies for our Deluxe package: a custom photo frame and a magazine-style photo book to cherish forever. (only for Deluxe package)</p>
+                        <!-- <p class="text-gray-600">Exclusive freebies for our Deluxe package: a custom photo frame and a magazine-style photo book to cherish forever. (only for Deluxe package)</p> -->
                     </div>
                 </div>
 
@@ -959,15 +1081,15 @@
                             <h5 class="text-2xl font-display font-bold text-primary mb-4">Youtube</h5>
                         </div>
                         
-                        <p class="text-gray-600 mb-4">
+                        <!-- <p class="text-gray-600 mb-4">
                             Subscribe to our official YouTube channel to see our latest wedding films, pre-wedding
                             trailers, and behind-the-scenes content!
-                        </p>
+                        </p> -->
                         <a href="https://www.youtube.com/@photowalaa-w6m" target="_blank"
                             class="w-full inline-block text-center bg-white text-red-600 font-semibold py-3 rounded-lg hover:bg-gray-100 transition duration-300 shadow-md hover:shadow-lg border border-red-600">
                             <img src="photos/youtube.png" alt="YouTube Logo" class="inline w-6 h-6 mr-2">@PHOTOWALAA
                         </a>
-                        <p class="text-sm text-gray-500 mt-3 text-center">youtube.com/@PHOTOWALAA</p>
+                        <!-- <p class="text-sm text-gray-500 mt-3 text-center">youtube.com/@PHOTOWALAA</p> -->
                     </div>
                     <!--Instagram follow link-->
                     <div
@@ -976,15 +1098,15 @@
                             
                             <h5 class="text-2xl font-display font-bold text-primary mb-4">Instagram</h5>
                         </div>
-                        <p class="text-gray-600 mb-4">
+                        <!-- <p class="text-gray-600 mb-4">
                             Follow our to instagram to see our latest wedding films, pre-wedding
                             trailers, and behind-the-scenes content!
-                        </p>
+                        </p> -->
                         <a href="https://www.instagram.com/photowalaa___?igsh=MXdidzRwaW9xcThzMA==" target="_blank"
                             class="w-full inline-block text-center bg-gradient-to-r from-pink-500 to-purple-500 text-white font-semibold py-3 rounded-lg hover:from-pink-600 hover:to-purple-600 transition duration-300 shadow-md hover:shadow-lg">
                             <img src="photos/instagram.png" alt="Instagram Logo" class="inline w-6 h-6 mr-2">@photowalaa___
                         </a>
-                        <p class="text-sm text-gray-500 mt-3 text-center">Instagram/@photowalaa___</p>
+                        <!-- <p class="text-sm text-gray-500 mt-3 text-center">Instagram/@photowalaa___</p> -->
                     </div>
                 </div>
             </div>

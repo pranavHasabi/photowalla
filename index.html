@@ -330,14 +330,8 @@
             }
         }
 
-        /* Reduce About Us section size by 30% on mobile */
+        /* Reduce Testimonials section size by 30% on mobile */
 @media (max-width: 768px) {
-    #about {
-        padding: 1.75rem;
-    }
-    #about h3 {
-        font-size: 1.575rem;
-    }
     #testimonials {
         padding-top: 2.8rem;
         padding-bottom: 2.8rem;
@@ -441,6 +435,39 @@
             }
             #portfolio .gap-8 {
                 gap: 1.4rem;
+            }
+            #pricing {
+                padding: 3.5rem;
+                padding-top: 2.8rem;
+            }
+            #pricing h3 {
+                font-size: 2.1rem;
+                margin-bottom: 2.1rem;
+            }
+            #pricing .grid {
+                gap: 1.4rem;
+            }
+            #pricing .bg-background-light {
+                padding: 1.4rem;
+            }
+            #pricing .bg-primary {
+                padding: 1.4rem;
+            }
+            #pricing h4 {
+                font-size: 2.1rem;
+            }
+            #pricing .text-5xl {
+                font-size: 2.1rem;
+            }
+            #pricing ul {
+                margin-bottom: 1.4rem;
+            }
+            #pricing .text-center p {
+                font-size: 0.8rem;
+                margin-top: 2.8rem;
+            }
+            #pricing .text-sm {
+                font-size: 0.7rem;
             }
         }
 
@@ -577,12 +604,12 @@
     <header class="fixed top-0 left-0 w-full z-30 bg-white/90 backdrop-blur-sm shadow-md">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex justify-between items-center">
             <a href="#home"
-                class="flex items-center space-x-2 text-2xl font-display font-bold text-primary tracking-wider">
+                class="flex items-center space-x-2 text-xl sm:text-2xl font-display font-bold text-primary tracking-wider">
                 <!-- Logo Image -->
-                <img src="photos/logo navbar.png" alt="Photowalaa Logo" class="w-8 h-6">
+                <img src="photos/logo navbar.png" alt="Photowalaa Logo" class="w-6 h-4 sm:w-8 sm:h-6">
                 <span>PHOTOWALAA</span>
             </a>
-            <div class="flex items-center space-x-4 hidden md:flex text-text-dark text-sm font-semibold">
+            <div class="hidden md:flex items-center space-x-4 text-text-dark text-sm font-semibold">
                 <a href="#home" class="nav-link px-3 py-1 hover:text-primary transition duration-300">HOME</a>
                 <a href="#about" class="nav-link px-3 py-1 hover:text-primary transition duration-300">ABOUT</a>
                 <a href="#services" class="nav-link px-3 py-1 hover:text-primary transition duration-300">OFFERINGS</a>
@@ -600,7 +627,7 @@
                 </svg>
             </button>
             <!-- Mobile Menu -->
-            <div id="mobile-menu" class="md:hidden absolute top-full left-0 w-full bg-white/90 backdrop-blur-sm shadow-md hidden">
+            <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-white/90 backdrop-blur-sm shadow-md">
                 <div class="flex flex-col items-center space-y-4 py-4 text-text-dark text-sm font-semibold">
                     <a href="#home" class="nav-link px-3 py-1 hover:text-primary transition duration-300">HOME</a>
                     <a href="#about" class="nav-link px-3 py-1 hover:text-primary transition duration-300">ABOUT</a>
@@ -726,7 +753,7 @@
             <!-- Dark overlay to keep text readable -->
             <div class="overlay"></div>
 
-            <div class="relative z-10 p-8 rounded-lg max-w-4xl">
+            <div class="relative z-10 p-4 sm:p-6 md:p-8 lg:p-10 rounded-lg max-w-4xl">
                 <img src="photos/hero section/logo.png" alt="Photowalaa, Hubli" class="h-14 sm:h-20 md:h-24 lg:h-28 xl:h-36 2xl:h-40 mb-4 block mx-auto">
                 <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-6xl font-display font-bold text-white leading-tight mb-4">
                     PHOTOWALLA
@@ -749,26 +776,26 @@
 
         <!-- 2. ABOUT US - STORYTELLERS -->
         <section id="about"
-            class="animate-on-scroll snap-section flex flex-col md:flex-row items-center bg-background-light p-10 sm:p-20">
-            <div class="animate-on-scroll md:w-1/2 p-4 md:p-8">
-                <p class="text-primary text-sm tracking-widest uppercase mb-2">Our Philosophy</p>
-                <h3 class="text-4xl sm:text-5xl font-display font-semibold text-text-dark mb-6">
-                    More than Photography, We're Storytellers.
-                </h3>
-                <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+            class="animate-on-scroll snap-section flex flex-col md:flex-row items-center bg-background-light p-4 sm:p-8 md:p-16 lg:p-20">
+            <div class="animate-on-scroll md:w-1/2 p-2 md:p-6 lg:p-8">
+                <p class="text-primary text-xs sm:text-sm tracking-widest uppercase mb-2">Our Philosophy</p>
+        <h3 class="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-display font-semibold text-text-dark mb-4 sm:mb-6">
+            More than Photography, We're Storytellers.
+        </h3>
+                <p class="text-base sm:text-lg text-gray-600 mb-4 sm:mb-6 leading-relaxed">
                     Photowalaa isn't just a wedding photography company — we’re storytellers. Based in [HUBLI],
                     we specialize in capturing real moments, raw emotions, and timeless memories.
                 </p>
-                <p class="text-lg text-gray-600 leading-relaxed border-l-4 border-primary pl-4 italic">
+                <p class="text-base sm:text-lg text-gray-600 leading-relaxed border-l-4 border-primary pl-3 sm:pl-4 italic">
                     Whether it's the stolen glances, heartfelt hugs, or wild dance moves, we freeze those
                     once-in-a-lifetime moments in their most authentic form.
                 </p>
-                <a href="#founder" class="mt-6 inline-block text-primary font-semibold hover:underline">Meet the Founder
+                <a href="#founder" class="mt-4 sm:mt-6 inline-block text-primary font-semibold hover:underline text-sm sm:text-base">Meet the Founder
                     &rarr;</a>
             </div>
-            <div class="animate-on-scroll md:w-1/2 p-4 md:p-8">
+            <div class="animate-on-scroll md:w-1/2 p-2 md:p-6 lg:p-8 mt-4 md:mt-0">
                 <!-- Placeholder for a compelling portfolio image -->
-                <div class="aspect-video w-full rounded-xl overflow-hidden shadow-2xl">
+                <div class="aspect-square md:aspect-video w-full rounded-xl overflow-hidden shadow-2xl">
                     <img src="photos/about us.png" alt="Couple portrait displaying raw emotion"
                         class="w-full h-full object-cover">
                 </div>
@@ -776,59 +803,59 @@
         </section>
 
         <!-- 3. SERVICES / WHAT WE OFFER -->
-        <section id="services" class="animate-on-scroll snap-section bg-white p-10 sm:p-20 pt-16">
+        <section id="services" class="animate-on-scroll snap-section bg-white p-4 sm:p-6 md:p-10 lg:p-20 pt-4 sm:pt-8 md:pt-16">
             <div class="max-w-6xl mx-auto">
                 <p class="text-center text-primary text-sm tracking-widest uppercase mb-2">Our Craft</p>
-                <h3 class="text-4xl sm:text-5xl font-display font-semibold text-text-dark text-center mb-12">
+                <h3 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-display font-semibold text-text-dark text-center mb-4 sm:mb-6 md:mb-8 lg:mb-12">
                     Comprehensive Offerings
                 </h3>
 
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
                     <!-- Service 1 -->
-                     <div class="animate-on-scroll p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300" style="background-image: url('photos/prewedding/1.png'); background-size: cover; background-position: center; background-blend-mode: overlay; background-color: rgba(248, 245, 242, 0.8);">
-                        <h4 class="font-display text-2xl font-bold mb-2">Candid Wedding Photography</h4>
+                     <div class="animate-on-scroll p-4 sm:p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300" style="background-image: url('photos/prewedding/1.png'); background-size: cover; background-position: center; background-blend-mode: overlay; background-color: rgba(248, 245, 242, 0.8);">
+                        <h4 class="font-display text-lg sm:text-xl md:text-2xl font-bold mb-2">Candid Wedding Photography</h4>
                         <!-- <p class="text-gray-600">Our signature approach: capturing spontaneous, unposed moments that
                             define your relationship and the energy of the day.</p> -->
                     </div>
                     <!-- Service 2 -->
-                     <div class="animate-on-scroll p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300" style="background-image: url('photos/prewedding/2.png'); background-size: cover; background-position: center; background-blend-mode: overlay; background-color: rgba(248, 245, 242, 0.8);">
-                        <h4 class="font-display text-2xl font-bold mb-2">Traditional Photography & Videography</h4>
+                     <div class="animate-on-scroll p-4 sm:p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300" style="background-image: url('photos/prewedding/2.png'); background-size: cover; background-position: center; background-blend-mode: overlay; background-color: rgba(248, 245, 242, 0.8);">
+                        <h4 class="font-display text-lg sm:text-xl md:text-2xl font-bold mb-2">Traditional Photography & Videography</h4>
                         <!-- <p class="text-gray-600">A high-quality, emotionally resonant film that tells the complete story
                             of your wedding day with flair and style.</p> -->
                     </div>
                     <!-- Service 3 -->
-                    <div class="animate-on-scroll p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300" style="background-image: url('photos/prewedding/3.png'); background-size: cover; background-position: center; background-blend-mode: overlay; background-color: rgba(248, 245, 242, 0.8);">
-                        <h4 class="font-display text-2xl font-bold mb-2">Pre-Wedding Shoots</h4>
+                    <div class="animate-on-scroll p-4 sm:p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300" style="background-image: url('photos/prewedding/3.png'); background-size: cover; background-position: center; background-blend-mode: overlay; background-color: rgba(248, 245, 242, 0.8);">
+                        <h4 class="font-display text-lg sm:text-xl md:text-2xl font-bold mb-2">Pre-Wedding Shoots</h4>
                         <!-- <p class="text-gray-600">Personalized sessions, like the 'Retrostyle Prewedding,' designed to
                             capture your unique chemistry before the big day.</p> -->
                     </div>
                     <!-- Service 4 ( Cinematic Wedding Films) -->
-                    <div class="animate-on-scroll p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300" style="background-image: url('photos/wedding/1.png'); background-size: cover; background-position: center; background-blend-mode: overlay; background-color: rgba(248, 245, 242, 0.8);">
-                        <h4 class="font-display text-2xl font-bold mb-2">Cinematic Wedding Films</h4>
+                    <div class="animate-on-scroll p-4 sm:p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300" style="background-image: url('photos/wedding/1.png'); background-size: cover; background-position: center; background-blend-mode: overlay; background-color: rgba(248, 245, 242, 0.8);">
+                        <h4 class="font-display text-lg sm:text-xl md:text-2xl font-bold mb-2">Cinematic Wedding Films</h4>
                         <!-- <p class="text-gray-600">Immerse your guests in the magic of your wedding with our cinematic films, featuring stunning visuals, emotional storytelling, and professional editing.</p> -->
                     </div>
                     <!-- Service 5 (Drone) -->
-                     <div class="animate-on-scroll p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300" style="background-image: url('photos/wedding/2.png'); background-size: cover; background-position: center; background-blend-mode: overlay; background-color: rgba(248, 245, 242, 0.8);">
-                        <h4 class="font-display text-2xl font-bold mb-2">Drone Coverage</h4>
+                     <div class="animate-on-scroll p-4 sm:p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300" style="background-image: url('photos/wedding/2.png'); background-size: cover; background-position: center; background-blend-mode: overlay; background-color: rgba(248, 245, 242, 0.8);">
+                        <h4 class="font-display text-lg sm:text-xl md:text-2xl font-bold mb-2">Drone Coverage</h4>
                         <!-- <p class="text-gray-600">Breathtaking aerial views to add a grand, sweeping perspective to your
                             film and photography collection.</p> -->
                     </div>
                     <!-- Service 6 ( Customized Wedding Albums) -->
-                     <div class="animate-on-scroll p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300" style="background-image: url('photos/wedding/3.png'); background-size: cover; background-position: center; background-blend-mode: overlay; background-color: rgba(248, 245, 242, 0.8);">
+                     <div class="animate-on-scroll p-4 sm:p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300" style="background-image: url('photos/wedding/3.png'); background-size: cover; background-position: center; background-blend-mode: overlay; background-color: rgba(248, 245, 242, 0.8);">
                         <!-- <span class="text-primary text-3xl mb-3 block">🎁</span> -->
-                        <h4 class="font-display text-2xl font-bold mb-2">Customized Wedding Albums</h4>
+                        <h4 class="font-display text-lg sm:text-xl md:text-2xl font-bold mb-2">Customized Wedding Albums</h4>
                         <!-- <p class="text-gray-600">Personalized wedding albums designed to showcase your favorite moments in elegant, high-quality layouts.</p> -->
                     </div>
                     <!--Service 7 (FREE PHOTO FRAME AND MAGZINE)-->
-                    <div class="animate-on-scroll p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300" style="background-image: url('photos/prewedding/1.png'); background-size: cover; background-position: center; background-blend-mode: overlay; background-color: rgba(248, 245, 242, 0.8);">
+                    <div class="animate-on-scroll p-4 sm:p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300" style="background-image: url('photos/prewedding/1.png'); background-size: cover; background-position: center; background-blend-mode: overlay; background-color: rgba(248, 245, 242, 0.8);">
                         <!-- <span class="text-primary text-3xl mb-3 block">🎁</span> -->
-                        <h4 class="font-display text-2xl font-bold mb-2">FREE PHOTO FRAME AND MAGZINE</h4>
+                        <h4 class="font-display text-lg sm:text-xl md:text-2xl font-bold mb-2">FREE PHOTO FRAME AND MAGZINE</h4>
                         <!-- <p class="text-gray-600">Exclusive freebies for our Deluxe package: a custom photo frame and a magazine-style photo book to cherish forever. (only for Deluxe package)</p> -->
                     </div>
                 </div>
 
-                <div class="text-center mt-12">
-                    <p class="text-lg text-gray-500 italic animated-text">We also cover Special Events like Birthdays, Musical
+                <div class="text-center mt-8 sm:mt-12">
+                    <p class="text-sm sm:text-base md:text-lg text-gray-500 italic animated-text">We also cover Special Events like Birthdays, Musical
                         Concerts, and Fashion shoots!</p>
                 </div>
             </div>
@@ -1150,36 +1177,36 @@
         </section>
 
         <!-- 6. PRICING SECTION -->
-        <section id="pricing" class="animate-on-scroll snap-section bg-white p-10 sm:p-20 pt-16">
+        <section id="pricing" class="animate-on-scroll snap-section bg-white p-6 sm:p-10 md:p-16 lg:p-20 pt-8 sm:pt-12 md:pt-16">
             <div class="max-w-6xl mx-auto">
-                <p class="text-center text-primary text-sm tracking-widest uppercase mb-2">Our Packages</p>
-                <h3 class="text-4xl sm:text-5xl font-display font-semibold text-text-dark text-center mb-12">
+                <p class="text-center text-primary text-xs sm:text-sm tracking-widest uppercase mb-2">Our Packages</p>
+                <h3 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-semibold text-text-dark text-center mb-6 sm:mb-8 md:mb-12">
                     Choose Your Perfect Wedding Story
                 </h3>
 
-                <div class="grid md:grid-cols-3 gap-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
                     <!-- Package 1: Basic -->
-                    <div class="animate-on-scroll bg-background-light p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 text-center border-2 border-transparent hover:border-primary">
-                        <h4 class="font-display text-3xl font-bold mb-4 text-primary">Basic Package</h4>
-                        <div class="text-5xl font-display font-bold text-text-dark mb-4">₹75,000</div>
-                        <p class="text-gray-600 mb-6">Perfect for intimate weddings</p>
-                        <ul class="text-left space-y-2 mb-8">
+                    <div class="animate-on-scroll bg-background-light p-4 sm:p-6 md:p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 text-center border-2 border-transparent hover:border-primary">
+                        <h4 class="font-display text-xl sm:text-2xl md:text-3xl font-bold mb-3 sm:mb-4 text-primary">Basic Package</h4>
+                        <div class="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-text-dark mb-3 sm:mb-4">₹75,000</div>
+                        <p class="text-gray-600 text-sm sm:text-base mb-4 sm:mb-6">Perfect for intimate weddings</p>
+                        <ul class="text-left space-y-2 mb-4 sm:mb-6 md:mb-8 text-xs sm:text-sm">
                             <li class="flex items-center"><span class="text-primary mr-2">✓</span> 6 Hours Coverage</li>
                             <li class="flex items-center"><span class="text-primary mr-2">✓</span> Candid Photography</li>
                             <li class="flex items-center"><span class="text-primary mr-2">✓</span> 300+ Edited Photos</li>
                             <li class="flex items-center"><span class="text-primary mr-2">✓</span> Online Gallery</li>
                             <li class="flex items-center"><span class="text-primary mr-2">✓</span> Basic Album</li>
                         </ul>
-                        <a href="#contact" class="inline-block bg-primary text-white px-6 py-3 rounded-full hover:bg-primary/80 transition duration-300">Book Now</a>
+                        <a href="#contact" class="inline-block bg-primary text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full hover:bg-primary/80 transition duration-300 text-sm sm:text-base">Book Now</a>
                     </div>
 
                     <!-- Package 2: Premium -->
-                    <div class="animate-on-scroll bg-primary p-8 rounded-xl shadow-lg text-center text-white relative">
-                        <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-secondary text-text-dark px-4 py-1 rounded-full text-sm font-bold">Most Popular</div>
-                        <h4 class="font-display text-3xl font-bold mb-4">Premium Package</h4>
-                        <div class="text-5xl font-display font-bold mb-4">₹1,25,000</div>
-                        <p class="mb-6 opacity-90">Complete wedding coverage</p>
-                        <ul class="text-left space-y-2 mb-8">
+                    <div class="animate-on-scroll bg-primary p-4 sm:p-6 md:p-8 rounded-xl shadow-lg text-center text-white relative">
+                        <div class="absolute -top-3 sm:-top-4 left-1/2 transform -translate-x-1/2 bg-secondary text-text-dark px-3 sm:px-4 py-1 rounded-full text-xs sm:text-sm font-bold">Most Popular</div>
+                        <h4 class="font-display text-xl sm:text-2xl md:text-3xl font-bold mb-3 sm:mb-4">Premium Package</h4>
+                        <div class="text-3xl sm:text-4xl md:text-5xl font-display font-bold mb-3 sm:mb-4">₹1,25,000</div>
+                        <p class="text-sm sm:text-base mb-4 sm:mb-6 opacity-90">Complete wedding coverage</p>
+                        <ul class="text-left space-y-2 mb-4 sm:mb-6 md:mb-8 text-xs sm:text-sm">
                             <li class="flex items-center"><span class="mr-2">✓</span> Full Day Coverage (12 Hours)</li>
                             <li class="flex items-center"><span class="mr-2">✓</span> Candid + Traditional Photography</li>
                             <li class="flex items-center"><span class="mr-2">✓</span> 600+ Edited Photos</li>
@@ -1187,7 +1214,7 @@
                             <li class="flex items-center"><span class="mr-2">✓</span> Premium Album + USB</li>
                             <li class="flex items-center"><span class="mr-2">✓</span> Drone Coverage</li>
                         </ul>
-                        <a href="#contact" class="inline-block bg-white text-primary px-6 py-3 rounded-full hover:bg-gray-100 transition duration-300 font-semibold blob-btn" style="transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.2)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='';">Book Now</a>
+                        <a href="#contact" class="inline-block bg-white text-primary px-4 sm:px-6 py-2 sm:py-3 rounded-full hover:bg-gray-100 transition duration-300 font-semibold blob-btn text-sm sm:text-base" style="transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.2)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='';">Book Now</a>
                     </div>
 
                     <!-- Package 3: Deluxe -->
@@ -1214,6 +1241,7 @@
                 </div>
             </div>
         </section>
+
 
         <!-- 7. WHY CHOOSE US / TEAM - Founder Section (Renumbered to 7) -->
         <section id="founder" class="animate-on-scroll snap-section bg-white p-10 sm:p-20">
@@ -1357,13 +1385,12 @@
         </section>
 
         <!-- GET IN TOUCH SECTION -->
-        <section id="get-in-touch" class="animate-on-scroll snap-section bg-background-light p-10 sm:p-20">
+        <!-- <section id="get-in-touch" class="animate-on-scroll snap-section bg-background-light p-10 sm:p-20">
             <div class="max-w-6xl mx-auto">
                 <h3 class="text-4xl sm:text-5xl font-display font-semibold text-text-dark text-center mb-12">
                     GET IN TOUCH
                 </h3>
                 <div class="grid md:grid-cols-2 gap-8 items-center">
-                    <!-- Left Column -->
                     <div class="animate-on-scroll">
                         <h4 class="text-2xl font-display font-bold text-primary mb-2">OUR LOCATION</h4>
                         <p class="text-lg text-gray-600 mb-6">Just around the Corner</p>
@@ -1383,7 +1410,6 @@
                         </ul>
                         <a href="https://www.google.com/maps/dir/?api=1&destination=KARNATAKA+CIRCLE+(NH+218),+Neelanagar,+Hubballi,+Karnataka+580025" target="_blank" class="mt-6 inline-block bg-primary text-white px-6 py-3 rounded-full hover:bg-primary/80 transition duration-300 shadow-lg hover:shadow-xl">GET DIRECTIONS</a>
                     </div>
-                    <!-- Right Column -->
                     <div class="animate-on-scroll">
                         <div class="aspect-video w-full rounded-xl overflow-hidden shadow-2xl">
                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3826.123456789012!2d75.123456789!3d15.123456789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb8d7e2f4b5c6d7%3A0x123456789abcdef!2sKARNATAKA+CIRCLE+(NH+218)%2C+Neelanagar%2C+Hubballi%2C+Karnataka+580025!5e0!3m2!1sen!2sin!4v1234567890!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -1391,7 +1417,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
     </main>
 
     <!-- FLOATING ELEMENTS -->

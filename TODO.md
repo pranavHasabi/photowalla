@@ -7,8 +7,8 @@ Convert the desktop-first website to mobile-first responsive design using Tailwi
 - [x] Update Navigation (header) for mobile-first responsiveness
 - [x] Update Hero Section for mobile-first layout
 - [x] Update About Section for mobile-first layout
-- [ ] Update Services Section for mobile-first layout
-- [ ] Update Portfolio Section for mobile-first layout
+- [x] Update Services Section for mobile-first layout
+- [ ] Update GALLERY SECTION for mobile-first layout
 - [ ] Update Testimonials Section for mobile-first layout
 - [ ] Update Pricing Section for mobile-first layout (adjust grid, padding, font sizes)
 - [ ] Update Founder Section for mobile-first layout (adjust grid, text sizes)

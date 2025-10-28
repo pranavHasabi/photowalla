@@ -283,6 +283,7 @@
                 flex: 0 0 60%;
                 /* Show 1.67 videos on mobile, more compact */
             }
+
             .snap-section {
                 min-height: 70vh;
             }
@@ -331,141 +332,183 @@
         }
 
         /* Reduce Testimonials section size by 30% on mobile */
-@media (max-width: 768px) {
-    #testimonials {
-        padding-top: 2.8rem;
-        padding-bottom: 2.8rem;
-    }
-    #testimonials h3 {
-        font-size: 1.575rem;
-    }
-}
-    #portfolio .gap-8 {
-        gap: 1.4rem;
-    }
+        @media (max-width: 768px) {
+            #testimonials {
+                padding-top: 2.8rem;
+                padding-bottom: 2.8rem;
+            }
 
-    #portfolio .gap-8 {
-        gap: 1.4rem;
-    }
-    #testimonials {
-        padding-top: 4.2rem;
-        padding-bottom: 4.2rem;
-    }
-    #testimonials h3 {
-        font-size: 2.1rem;
-    }
-    #testimonials .grid {
-        gap: 1.4rem;
-    }
-    #testimonials .bg-white {
-        padding: 1.05rem;
-    }
-    #testimonials .bg-white img {
-        width: 3.5rem;
-        height: 3.5rem;
-        margin-bottom: 0.7rem;
-    }
-    #testimonials .bg-white p {
-        font-size: 0.7rem;
-        margin-bottom: 0.7rem;
-    }
-    #testimonials .bg-white p.font-bold {
-        margin-bottom: 0;
-    }
-    #testimonials .bg-white p:last-child {
-        font-size: 0.525rem;
-        margin-bottom: 0;
-    }
+            #testimonials h3 {
+                font-size: 1.575rem;
+            }
+        }
+
+        #portfolio .gap-8 {
+            gap: 1.4rem;
+        }
+
+        #portfolio .gap-8 {
+            gap: 1.4rem;
+        }
+
+        #testimonials {
+            padding-top: 4.2rem;
+            padding-bottom: 4.2rem;
+        }
+
+        #testimonials h3 {
+            font-size: 2.1rem;
+        }
+
+        #testimonials .grid {
+            gap: 1.4rem;
+        }
+
+        #testimonials .bg-white {
+            padding: 1.05rem;
+        }
+
+        #testimonials .bg-white img {
+            width: 3.5rem;
+            height: 3.5rem;
+            margin-bottom: 0.7rem;
+        }
+
+        #testimonials .bg-white p {
+            font-size: 0.7rem;
+            margin-bottom: 0.7rem;
+        }
+
+        #testimonials .bg-white p.font-bold {
+            margin-bottom: 0;
+        }
+
+        #testimonials .bg-white p:last-child {
+            font-size: 0.525rem;
+            margin-bottom: 0;
+        }
 
 
         /* Reduce Services/Offerings section internal elements by 30% on mobile and tablet (max-width 1024px) */
         @media (max-width: 1024px) {
-            #services .grid > div {
-                padding: 1rem; /* Reduced from p-6 (1.5rem) by 30% */
+            #services .grid>div {
+                padding: 1rem;
+                /* Reduced from p-6 (1.5rem) by 30% */
             }
+
             #services h4 {
-                font-size: 1.25rem; /* Reduced from text-2xl (1.5rem) by 30% */
+                font-size: 1.25rem;
+                /* Reduced from text-2xl (1.5rem) by 30% */
             }
+
             #services .grid {
-                gap: 1.5rem; /* Reduced from gap-8 (2rem) by 30% */
+                gap: 1.5rem;
+                /* Reduced from gap-8 (2rem) by 30% */
             }
+
             #services h3 {
-                margin-bottom: 2.1rem; /* Reduced from mb-12 (3rem) by 30% */
-                font-size: 1.575rem; /* Reduced from text-4xl (2.25rem) by 30% */
+                margin-bottom: 2.1rem;
+                /* Reduced from mb-12 (3rem) by 30% */
+                font-size: 1.575rem;
+                /* Reduced from text-4xl (2.25rem) by 30% */
             }
+
             #services .text-center p {
-                font-size: 0.8rem; /* Reduced from text-lg (1.125rem) by 30% */
-                margin-top: 2.1rem; /* Reduced from mt-12 (3rem) by 30% */
+                font-size: 0.8rem;
+                /* Reduced from text-lg (1.125rem) by 30% */
+                margin-top: 2.1rem;
+                /* Reduced from mt-12 (3rem) by 30% */
             }
+
             #portfolio {
                 padding: 3.5rem;
                 padding-top: 2.8rem;
             }
+
             #portfolio h3 {
                 font-size: 2.1rem;
                 margin-bottom: 2.1rem;
             }
+
             #portfolio h4 {
                 font-size: 1.3125rem;
                 margin-bottom: 1.05rem;
             }
+
             #portfolio h4:nth-of-type(2) {
                 margin-top: 2.1rem;
             }
+
             #portfolio .photo-card {
                 min-height: 245px;
                 padding: 0 5.6px;
             }
+
             #portfolio .photo-card .grid {
                 gap: 0.7rem;
             }
+
             #portfolio .video-card {
                 min-width: 140px;
                 padding: 0 5.6px;
             }
+
             #portfolio .p-6 {
                 padding: 1.05rem;
             }
+
             #portfolio .p-6 h5 {
                 font-size: 1.05rem;
             }
+
             #portfolio .p-6 a {
                 padding-top: 0.525rem;
                 padding-bottom: 0.525rem;
             }
+
             #portfolio .gap-8 {
                 gap: 1.4rem;
             }
+
             #pricing {
                 padding: 3.5rem;
                 padding-top: 2.8rem;
             }
+
             #pricing h3 {
                 font-size: 2.1rem;
                 margin-bottom: 2.1rem;
             }
+
             #pricing .grid {
                 gap: 1.4rem;
             }
+
             #pricing .bg-background-light {
                 padding: 1.4rem;
             }
+
             #pricing .bg-primary {
                 padding: 1.4rem;
             }
+
             #pricing h4 {
                 font-size: 2.1rem;
             }
+
             #pricing .text-5xl {
                 font-size: 2.1rem;
             }
+
             #pricing ul {
                 margin-bottom: 1.4rem;
             }
+
             #pricing .text-center p {
                 font-size: 0.8rem;
                 margin-top: 2.8rem;
             }
+
             #pricing .text-sm {
                 font-size: 0.7rem;
             }
@@ -481,6 +524,7 @@
                 opacity: 0;
                 transform: translateY(30px);
             }
+
             100% {
                 opacity: 1;
                 transform: translateY(0);
@@ -522,7 +566,8 @@
             height: 2px;
             bottom: 0;
             left: 50%;
-            background-color: #AAB99A; /* secondary color */
+            background-color: #AAB99A;
+            /* secondary color */
             transition: all 0.3s ease;
         }
 
@@ -627,12 +672,15 @@
                 </svg>
             </button>
             <!-- Mobile Menu -->
-            <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-white/90 backdrop-blur-sm shadow-md">
+            <div id="mobile-menu"
+                class="hidden md:hidden absolute top-full left-0 w-full bg-white/90 backdrop-blur-sm shadow-md">
                 <div class="flex flex-col items-center space-y-4 py-4 text-text-dark text-sm font-semibold">
                     <a href="#home" class="nav-link px-3 py-1 hover:text-primary transition duration-300">HOME</a>
                     <a href="#about" class="nav-link px-3 py-1 hover:text-primary transition duration-300">ABOUT</a>
-                    <a href="#services" class="nav-link px-3 py-1 hover:text-primary transition duration-300">OFFERINGS</a>
-                    <a href="#portfolio" class="nav-link px-3 py-1 hover:text-primary transition duration-300">PORTFOLIO</a>
+                    <a href="#services"
+                        class="nav-link px-3 py-1 hover:text-primary transition duration-300">OFFERINGS</a>
+                    <a href="#portfolio"
+                        class="nav-link px-3 py-1 hover:text-primary transition duration-300">PORTFOLIO</a>
                     <a href="#contact"
                         class="btn-hover px-3 py-1 border-2 border-primary text-primary rounded-full hover:bg-primary hover:text-white transition duration-300 shadow-md hover:shadow-lg">BOOK
                         NOW</a>
@@ -643,7 +691,8 @@
 
     <main class="snap-container">
         <!-- 1. HERO / HOME SECTION - Animated Horizontal Grid -->
-        <section id="home" class="animate-on-scroll snap-section relative flex items-center justify-center text-center p-4">
+        <section id="home"
+            class="animate-on-scroll snap-section relative flex items-center justify-center text-center p-4">
 
             <!-- Animated Horizontal Grid Background -->
             <div class="hero-background">
@@ -654,20 +703,20 @@
                     <div class="grid-column-set w-[30vw] sm:w-[18vw]">
                         <div class="grid-item h-1-2"><img src="photos/prewedding/1.png"
                                 alt="Pre-wedding couple portrait"></div>
-                        <div class="grid-item h-1-2"><img src="photos/wedding/1.png"
-                                alt="Wedding ceremony moment"></div>
+                        <div class="grid-item h-1-2"><img src="photos/wedding/1.png" alt="Wedding ceremony moment">
+                        </div>
                     </div>
                     <!-- Column Set 2 (Narrow, Single Tall) -->
                     <div class="grid-column-set w-[18vw] sm:w-[10vw]">
-                        <div class="grid-item h-full"><img src="photos/about us.png"
-                                alt="Emotional couple embrace"></div>
+                        <div class="grid-item h-full"><img src="photos/about us.png" alt="Emotional couple embrace">
+                        </div>
                     </div>
                     <!-- Column Set 3 (Standard, 2/5 + 3/5 split) -->
                     <div class="grid-column-set w-[36vw] sm:w-[24vw]">
-                        <div class="grid-item h-2-5"><img src="photos/prewedding/2.png"
-                                alt="Pre-wedding shoot detail"></div>
-                        <div class="grid-item h-3-5"><img src="photos/wedding/2.png"
-                                alt="Wedding celebration scene"></div>
+                        <div class="grid-item h-2-5"><img src="photos/prewedding/2.png" alt="Pre-wedding shoot detail">
+                        </div>
+                        <div class="grid-item h-3-5"><img src="photos/wedding/2.png" alt="Wedding celebration scene">
+                        </div>
                     </div>
                     <!-- Column Set 4 (Medium, 1/3 + 2/3 split) -->
                     <div class="grid-column-set w-[24vw] sm:w-[15vw]">
@@ -678,31 +727,26 @@
                     </div>
                     <!-- Column Set 5 (Narrow, Single Tall) -->
                     <div class="grid-column-set w-[18vw] sm:w-[10vw]">
-                        <div class="grid-item h-full"><img src="photos/founder.png"
-                                alt="Founder portrait"></div>
+                        <div class="grid-item h-full"><img src="photos/founder.png" alt="Founder portrait"></div>
                     </div>
                     <!-- Column Set 6 (Wide, 1/3 + 1/3 + 1/3 split) -->
                     <div class="grid-column-set w-[36vw] sm:w-[24vw]">
-                        <div class="grid-item h-1-3"><img src="photos/wedding/3.png"
-                                alt="Traditional wedding portrait"></div>
+                        <div class="grid-item h-1-3"><img src="photos/wedding/3.png" alt="Traditional wedding portrait">
+                        </div>
                         <div class="grid-item h-1-3"><img src="photos/other events/2.png"
                                 alt="Event photography highlight"></div>
-                        <div class="grid-item h-1-3"><img src="photos/other events/3.png"
-                                alt="Ceremony detail shot"></div>
+                        <div class="grid-item h-1-3"><img src="photos/other events/3.png" alt="Ceremony detail shot">
+                        </div>
                     </div>
                     <!-- Column Set 7 (Standard, 1/2 + 1/2 split) -->
                     <div class="grid-column-set w-[30vw] sm:w-[18vw]">
-                        <div class="grid-item h-1-2"><img src="photos/prewedding/1.png"
-                                alt="Couple in love"></div>
-                        <div class="grid-item h-1-2"><img src="photos/wedding/1.png"
-                                alt="Wedding joy captured"></div>
+                        <div class="grid-item h-1-2"><img src="photos/prewedding/1.png" alt="Couple in love"></div>
+                        <div class="grid-item h-1-2"><img src="photos/wedding/1.png" alt="Wedding joy captured"></div>
                     </div>
                     <!-- Column Set 8 (Medium, 3/5 + 2/5 split) -->
                     <div class="grid-column-set w-[24vw] sm:w-[15vw]">
-                        <div class="grid-item h-3-5"><img src="photos/about us.png"
-                                alt="Authentic emotion"></div>
-                        <div class="grid-item h-2-5"><img src="photos/founder.png"
-                                alt="Creative vision"></div>
+                        <div class="grid-item h-3-5"><img src="photos/about us.png" alt="Authentic emotion"></div>
+                        <div class="grid-item h-2-5"><img src="photos/founder.png" alt="Creative vision"></div>
                     </div>
 
                     <!-- BEGIN DUPLICATE IMAGE SET (for seamless looping) -->
@@ -754,11 +798,14 @@
             <div class="overlay"></div>
 
             <div class="relative z-10 p-2 sm:p-3 md:p-4 lg:p-5 rounded-lg max-w-6xl">
-                <img src="photos/hero section/logo.png" alt="Photowalaa, Hubli" class="h-14 sm:h-20 md:h-24 lg:h-28 xl:h-36 2xl:h-40 mb-4 block mx-auto">
-                <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-6xl font-display font-bold text-white leading-tight mb-4">
+                <img src="photos/hero section/logo.png" alt="Photowalaa, Hubli"
+                    class="h-14 sm:h-20 md:h-24 lg:h-28 xl:h-36 2xl:h-40 mb-4 block mx-auto">
+                <h1
+                    class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-6xl font-display font-bold text-white leading-tight mb-4">
                     PHOTOWALLA
                 </h1>
-                <h2 class="text-base sm:text-lg md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-4xl font-display font-bold text-white leading-tight">
+                <h2
+                    class="text-base sm:text-lg md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-4xl font-display font-bold text-white leading-tight">
                     -"WE FREEZE MOMENTS"-
                 </h2>
                 <!-- <p class="text-white text-xl sm:text-xl mt-4 font-light max-w-2xl mx-auto">
@@ -779,18 +826,22 @@
             class="animate-on-scroll snap-section flex flex-col md:flex-row items-center bg-background-light p-4 sm:p-8 md:p-16 lg:p-20">
             <div class="animate-on-scroll md:w-1/2 p-2 md:p-6 lg:p-8">
                 <p class="text-primary text-xs sm:text-sm tracking-widest uppercase mb-2">Our Philosophy</p>
-        <h3 class="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-display font-semibold text-text-dark mb-4 sm:mb-6">
-            More than Photography, We're Storytellers.
-        </h3>
+                <h3
+                    class="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-display font-semibold text-text-dark mb-4 sm:mb-6">
+                    More than Photography, We're Storytellers.
+                </h3>
                 <p class="text-base sm:text-lg text-gray-600 mb-4 sm:mb-6 leading-relaxed">
                     Photowalaa isn't just a wedding photography company — we’re storytellers. Based in [HUBLI],
                     we specialize in capturing real moments, raw emotions, and timeless memories.
                 </p>
-                <p class="text-base sm:text-lg text-gray-600 leading-relaxed border-l-4 border-primary pl-3 sm:pl-4 italic">
+                <p
+                    class="text-base sm:text-lg text-gray-600 leading-relaxed border-l-4 border-primary pl-3 sm:pl-4 italic">
                     Whether it's the stolen glances, heartfelt hugs, or wild dance moves, we freeze those
                     once-in-a-lifetime moments in their most authentic form.
                 </p>
-                <a href="#founder" class="mt-4 sm:mt-6 inline-block text-primary font-semibold hover:underline text-sm sm:text-base">Meet the Founder
+                <a href="#founder"
+                    class="mt-4 sm:mt-6 inline-block text-primary font-semibold hover:underline text-sm sm:text-base">Meet
+                    the Founder
                     &rarr;</a>
             </div>
             <div class="animate-on-scroll md:w-1/2 p-2 md:p-6 lg:p-8 mt-4 md:mt-0">
@@ -806,69 +857,82 @@
         <section id="services" class="animate-on-scroll snap-section bg-white p-4 md:p-10 lg:p-20 pt-4 md:pt-16">
             <div class="max-w-6xl mx-auto">
                 <p class="text-center text-primary text-sm tracking-widest uppercase mb-2">Our Craft</p>
-                <h3 class="text-xl md:text-3xl lg:text-4xl xl:text-5xl font-display font-bold text-text-dark text-center mb-4 md:mb-8 lg:mb-12">
+                <h3
+                    class="text-xl md:text-3xl lg:text-4xl xl:text-5xl font-display font-bold text-text-dark text-center mb-4 md:mb-8 lg:mb-12">
                     Comprehensive Offerings
                 </h3>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
 
                     <!-- Card -->
-                    <div class="animate-on-scroll h-44 md:h-72 flex items-end p-4 md:p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 bg-center bg-cover bg-no-repeat relative" style="background-image: url('photos/prewedding/1.png');">
+                    <div class="animate-on-scroll h-44 md:h-72 flex items-end p-4 md:p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 bg-center bg-cover bg-no-repeat relative"
+                        style="background-image: url('photos/prewedding/1.png');">
                         <div class="absolute inset-0 bg-[rgba(0,0,0,0.5)] rounded-xl"></div>
                         <h4 class="relative font-display text-lg md:text-xl lg:text-2xl font-bold text-white">
                             Candid Wedding Photography
                         </h4>
                     </div>
-                    
-                  
-                    <div class="animate-on-scroll h-44 md:h-72 flex items-end p-4 md:p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 bg-center bg-cover bg-no-repeat relative" style="background-image: url('photos/prewedding/2.png');">
+
+
+                    <div class="animate-on-scroll h-44 md:h-72 flex items-end p-4 md:p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 bg-center bg-cover bg-no-repeat relative"
+                        style="background-image: url('photos/prewedding/2.png');">
                         <div class="absolute inset-0 bg-[rgba(0,0,0,0.5)] rounded-xl"></div>
-                        <h4 class="relative font-display text-lg md:text-xl lg:text-2xl font-bold text-white">Traditional Photography & Videography</h4>
+                        <h4 class="relative font-display text-lg md:text-xl lg:text-2xl font-bold text-white">
+                            Traditional Photography & Videography</h4>
                     </div>
-                  
-                    <div class="animate-on-scroll h-44 md:h-72 flex items-end p-4 md:p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 bg-center bg-cover bg-no-repeat relative" style="background-image: url('photos/prewedding/3.png');">
+
+                    <div class="animate-on-scroll h-44 md:h-72 flex items-end p-4 md:p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 bg-center bg-cover bg-no-repeat relative"
+                        style="background-image: url('photos/prewedding/3.png');">
                         <div class="absolute inset-0 bg-[rgba(0,0,0,0.5)] rounded-xl"></div>
-                        <h4 class="relative font-display text-lg md:text-xl lg:text-2xl font-bold text-white">Pre-Wedding Shoots</h4>
+                        <h4 class="relative font-display text-lg md:text-xl lg:text-2xl font-bold text-white">
+                            Pre-Wedding Shoots</h4>
                     </div>
-                  
-                   <div class="animate-on-scroll h-44 md:h-72 flex items-end p-4 md:p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 bg-center bg-cover bg-no-repeat relative" style="background-image: url('photos/wedding/1.png');">
+
+                    <div class="animate-on-scroll h-44 md:h-72 flex items-end p-4 md:p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 bg-center bg-cover bg-no-repeat relative"
+                        style="background-image: url('photos/wedding/1.png');">
                         <div class="absolute inset-0 bg-[rgba(0,0,0,0.5)] rounded-xl"></div>
-                        <h4 class="relative font-display text-lg md:text-xl lg:text-2xl font-bold text-white">Cinematic Wedding Films</h4>
+                        <h4 class="relative font-display text-lg md:text-xl lg:text-2xl font-bold text-white">Cinematic
+                            Wedding Films</h4>
                     </div>
-                  
-                    <div class="animate-on-scroll h-44 md:h-72 flex items-end p-4 md:p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 bg-center bg-cover bg-no-repeat relative" style="background-image: url('photos/wedding/2.png');">
+
+                    <div class="animate-on-scroll h-44 md:h-72 flex items-end p-4 md:p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 bg-center bg-cover bg-no-repeat relative"
+                        style="background-image: url('photos/wedding/2.png');">
                         <div class="absolute inset-0 bg-[rgba(0,0,0,0.5)] rounded-xl"></div>
-                        <h4 class="relative font-display text-lg md:text-xl lg:text-2xl font-bold text-white">Drone Coverage</h4>
+                        <h4 class="relative font-display text-lg md:text-xl lg:text-2xl font-bold text-white">Drone
+                            Coverage</h4>
                     </div>
-                  
-                    <div class="animate-on-scroll h-44 md:h-72 flex items-end p-4 md:p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 bg-center bg-cover bg-no-repeat relative" style="background-image: url('photos/wedding/3.png');">
+
+                    <div class="animate-on-scroll h-44 md:h-72 flex items-end p-4 md:p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 bg-center bg-cover bg-no-repeat relative"
+                        style="background-image: url('photos/wedding/3.png');">
                         <div class="absolute inset-0 bg-[rgba(0,0,0,0.5)] rounded-xl"></div>
-                        <h4 class="relative font-display text-lg md:text-xl lg:text-2xl font-bold text-white">Customized Wedding Albums</h4>
+                        <h4 class="relative font-display text-lg md:text-xl lg:text-2xl font-bold text-white">Customized
+                            Wedding Albums</h4>
                     </div>
-                  
-                    <div class="animate-on-scroll h-44 md:h-72 flex items-end p-4 md:p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 bg-center bg-cover bg-no-repeat relative" style="background-image: url('photos/other events/1.png');">
+
+                    <div class="animate-on-scroll h-44 md:h-72 flex items-end p-4 md:p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 bg-center bg-cover bg-no-repeat relative"
+                        style="background-image: url('photos/other events/1.png');">
                         <div class="absolute inset-0 bg-[rgba(0,0,0,0.5)] rounded-xl"></div>
-                        <h4 class="relative font-display text-lg md:text-xl lg:text-2xl font-bold text-white">FREE PHOTO FRAME AND MAGAZINE</h4>
+                        <h4 class="relative font-display text-lg md:text-xl lg:text-2xl font-bold text-white">FREE PHOTO
+                            FRAME AND MAGAZINE</h4>
                     </div>
-                  
-                  </div>
-                  
+
+                </div>
+
                 <div class="text-center mt-8 md:mt-12">
-                    <p class="text-sm md:text-lg text-gray-500 italic animated-text">We also cover Special Events like Birthdays, Musical
+                    <p class="text-sm md:text-lg text-gray-500 italic animated-text">We also cover Special Events like
+                        Birthdays, Musical
                         Concerts, and Fashion shoots!</p>
                 </div>
             </div>
         </section>
 
         <!-- 4. PORTFOLIO / GALLERY SECTION (Renumbered to 6) -->
-        <section
-  id="portfolio"
-  class="animate-on-scroll snap-section bg-background-light w-full px-4 py-2 md:px-8 lg:px-12 xl:px-20
-         sm:py-10 md:py-14 lg:py-2"
->                                                  
+        <section id="portfolio" class="animate-on-scroll snap-section bg-background-light w-full px-4 py-2 md:px-8 lg:px-12 xl:px-20
+         sm:py-10 md:py-14 lg:py-2">
             <div class="max-w-6xl mx-2">
                 <p class="text-center text-primary text-xs md:text-sm tracking-widest uppercase mb-2">Our Vision</p>
-                <h3 class="text-2xl md:text-4xl lg:text-5xl font-display font-semibold text-text-dark text-center mb-6 md:mb-12">
+                <h3
+                    class="text-2xl md:text-4xl lg:text-5xl font-display font-semibold text-text-dark text-center mb-6 md:mb-12">
                     A Glimpse of Our Work
                 </h3>
 
@@ -960,270 +1024,275 @@
                     </div>
                 </div>
 
-              
 
 
-  
+
+
             </div>
         </section>
         <section>
-              <!-- Video Showcase -->
-              <h4
-              class="text-3xl font-display font-semibold text-text-dark mt-12 mb-6 border-b border-primary/50 pb-2">
-              Cinematic Films & Videos</h4>
+            <!-- Video Showcase -->
+            <h4 class="text-3xl font-display font-semibold text-text-dark mt-12 mb-6 border-b border-primary/50 pb-2">
+                Cinematic Films & Videos</h4>
 
-          <div class="w-full overflow-hidden mb-8">
-              <div class="video-scroll-wrapper py-4">
-                  <!-- Duplicate content for infinite scroll (6 videos + 6 videos) -->
+            <div class="w-full overflow-hidden mb-8">
+                <div class="video-scroll-wrapper py-4">
+                    <!-- Duplicate content for infinite scroll (6 videos + 6 videos) -->
 
-                  <!-- Original Set -->
-                  <div class="video-card">
-                      <div class="video-container rounded-xl shadow-2xl overflow-hidden">
-                          <iframe width="100%" height="auto"
-                              src="https://www.youtube.com/embed/UJvTX6cUFxA"
-                              title="YouTube video player 1" frameborder="0"
-                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                              allowfullscreen></iframe>
-                      </div>
-                      <p class="text-center text-sm text-gray-600 mt-2 font-semibold">Teaser: Couple A</p>
-                  </div>
-                  <div class="video-card">
-                      <div class="video-container rounded-xl shadow-2xl overflow-hidden">
-                          <iframe width="100%" height="auto"
-                              src="https://www.youtube.com/embed/ctvOYx4WJ1Q"
-                              title="YouTube video player 2" frameborder="0"
-                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                              allowfullscreen></iframe>
-                      </div>
-                      <p class="text-center text-sm text-gray-600 mt-2 font-semibold">Wedding Film: Couple B</p>
-                  </div>
-                  <div class="video-card">
-                      <div class="video-container rounded-xl shadow-2xl overflow-hidden">
-                          <iframe width="100%" height="auto"
-                              src="https://www.youtube.com/embed/PfdQ-zmw1I8"
-                              title="YouTube video player 3" frameborder="0"
-                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                              allowfullscreen></iframe>
-                      </div>
-                      <p class="text-center text-sm text-gray-600 mt-2 font-semibold">Pre-Wedding: Retro Style</p>
-                  </div>
-                  <div class="video-card">
-                      <div class="video-container rounded-xl shadow-2xl overflow-hidden">
-                          <iframe width="100%" height="auto"
-                              src="https://www.youtube.com/embed/UKceIop9hCI"
-                              title="YouTube video player 4" frameborder="0"
-                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                              allowfullscreen></iframe>
-                      </div>
-                      <p class="text-center text-sm text-gray-600 mt-2 font-semibold">Highlights: Event C</p>
-                  </div>
-                  <div class="video-card">
-                      <div class="video-container rounded-xl shadow-2xl overflow-hidden">
-                          <iframe width="100%" height="auto"
-                              src="https://www.youtube.com/embed/VIDEO_ID_5?controls=0&modestbranding=1"
-                              title="YouTube video player 5" frameborder="0"
-                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                              allowfullscreen></iframe>
-                      </div>
-                      <p class="text-center text-sm text-gray-600 mt-2 font-semibold">Teaser: Couple D</p>
-                  </div>
-                  <div class="video-card">
-                      <div class="video-container rounded-xl shadow-2xl overflow-hidden">
-                          <iframe width="100%" height="auto"
-                              src="https://www.youtube.com/embed/VIDEO_ID_6?controls=0&modestbranding=1"
-                              title="YouTube video player 6" frameborder="0"
-                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                              allowfullscreen></iframe>
-                      </div>
-                      <p class="text-center text-sm text-gray-600 mt-2 font-semibold">Full Film: Couple E</p>
-                  </div>
+                    <!-- Original Set -->
+                    <div class="video-card">
+                        <div class="video-container rounded-xl shadow-2xl overflow-hidden">
+                            <iframe width="100%" height="auto" src="https://www.youtube.com/embed/UJvTX6cUFxA"
+                                title="YouTube video player 1" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                        <p class="text-center text-sm text-gray-600 mt-2 font-semibold">Teaser: Couple A</p>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-container rounded-xl shadow-2xl overflow-hidden">
+                            <iframe width="100%" height="auto" src="https://www.youtube.com/embed/ctvOYx4WJ1Q"
+                                title="YouTube video player 2" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                        <p class="text-center text-sm text-gray-600 mt-2 font-semibold">Wedding Film: Couple B</p>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-container rounded-xl shadow-2xl overflow-hidden">
+                            <iframe width="100%" height="auto" src="https://www.youtube.com/embed/PfdQ-zmw1I8"
+                                title="YouTube video player 3" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                        <p class="text-center text-sm text-gray-600 mt-2 font-semibold">Pre-Wedding: Retro Style</p>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-container rounded-xl shadow-2xl overflow-hidden">
+                            <iframe width="100%" height="auto" src="https://www.youtube.com/embed/UKceIop9hCI"
+                                title="YouTube video player 4" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                        <p class="text-center text-sm text-gray-600 mt-2 font-semibold">Highlights: Event C</p>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-container rounded-xl shadow-2xl overflow-hidden">
+                            <iframe width="100%" height="auto"
+                                src="https://www.youtube.com/embed/VIDEO_ID_5?controls=0&modestbranding=1"
+                                title="YouTube video player 5" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                        <p class="text-center text-sm text-gray-600 mt-2 font-semibold">Teaser: Couple D</p>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-container rounded-xl shadow-2xl overflow-hidden">
+                            <iframe width="100%" height="auto"
+                                src="https://www.youtube.com/embed/VIDEO_ID_6?controls=0&modestbranding=1"
+                                title="YouTube video player 6" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                        <p class="text-center text-sm text-gray-600 mt-2 font-semibold">Full Film: Couple E</p>
+                    </div>
 
-                  <!-- Duplicate Set for Seamless Loop -->
-                  <div class="video-card">
-                      <div class="video-container rounded-xl shadow-2xl overflow-hidden">
-                          <iframe width="100%" height="auto"
-                              src="https://www.youtube.com/embed/VIDEO_ID_1?controls=0&modestbranding=1"
-                              title="YouTube video player 1" frameborder="0"
-                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                              allowfullscreen></iframe>
-                      </div>
-                      <p class="text-center text-sm text-gray-600 mt-2 font-semibold">Teaser: Couple A (Dup)</p>
-                  </div>
-                  <div class="video-card">
-                      <div class="video-container rounded-xl shadow-2xl overflow-hidden">
-                          <iframe width="100%" height="auto"
-                              src="https://www.youtube.com/embed/ctvOYx4WJ1Q"
-                              title="YouTube video player 2" frameborder="0"
-                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                              allowfullscreen></iframe>
-                      </div>
-                      <p class="text-center text-sm text-gray-600 mt-2 font-semibold">Wedding Film: Couple B (Dup)
-                      </p>
-                  </div>
-                  <div class="video-card">
-                      <div class="video-container rounded-xl shadow-2xl overflow-hidden">
-                          <iframe width="100%" height="auto"
-                              src="https://www.youtube.com/embed/ctvOYx4WJ1Q"
-                              title="YouTube video player 3" frameborder="0"
-                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                              allowfullscreen></iframe>
-                      </div>
-                      <p class="text-center text-sm text-gray-600 mt-2 font-semibold">Pre-Wedding: Retro Style
-                          (Dup)</p>
-                  </div>
-                  <div class="video-card">
-                      <div class="video-container rounded-xl shadow-2xl overflow-hidden">
-                          <iframe width="100%" height="auto"
-                              src="https://www.youtube.com/embed/VIDEO_ID_4?controls=0&modestbranding=1"
-                              title="YouTube video player 4" frameborder="0"
-                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                              allowfullscreen></iframe>
-                      </div>
-                      <p class="text-center text-sm text-gray-600 mt-2 font-semibold">Highlights: Event C (Dup)
-                      </p>
-                  </div>
-                  <div class="video-card">
-                      <div class="video-container rounded-xl shadow-2xl overflow-hidden">
-                          <iframe width="100%" height="auto"
-                              src="https://www.youtube.com/embed/VIDEO_ID_5?controls=0&modestbranding=1"
-                              title="YouTube video player 5" frameborder="0"
-                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                              allowfullscreen></iframe>
-                      </div>
-                      <p class="text-center text-sm text-gray-600 mt-2 font-semibold">Teaser: Couple D (Dup)</p>
-                  </div>
-                  <div class="video-card">
-                      <div class="video-container rounded-xl shadow-2xl overflow-hidden">
-                          <iframe width="100%" height="auto"
-                              src="https://www.youtube.com/embed/VIDEO_ID_6?controls=0&modestbranding=1"
-                              title="YouTube video player 6" frameborder="0"
-                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                              allowfullscreen></iframe>
-                      </div>
-                      <p class="text-center text-sm text-gray-600 mt-2 font-semibold">Full Film: Couple E (Dup)
-                      </p>
-                  </div>
+                    <!-- Duplicate Set for Seamless Loop -->
+                    <div class="video-card">
+                        <div class="video-container rounded-xl shadow-2xl overflow-hidden">
+                            <iframe width="100%" height="auto"
+                                src="https://www.youtube.com/embed/VIDEO_ID_1?controls=0&modestbranding=1"
+                                title="YouTube video player 1" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                        <p class="text-center text-sm text-gray-600 mt-2 font-semibold">Teaser: Couple A (Dup)</p>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-container rounded-xl shadow-2xl overflow-hidden">
+                            <iframe width="100%" height="auto" src="https://www.youtube.com/embed/ctvOYx4WJ1Q"
+                                title="YouTube video player 2" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                        <p class="text-center text-sm text-gray-600 mt-2 font-semibold">Wedding Film: Couple B (Dup)
+                        </p>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-container rounded-xl shadow-2xl overflow-hidden">
+                            <iframe width="100%" height="auto" src="https://www.youtube.com/embed/ctvOYx4WJ1Q"
+                                title="YouTube video player 3" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                        <p class="text-center text-sm text-gray-600 mt-2 font-semibold">Pre-Wedding: Retro Style
+                            (Dup)</p>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-container rounded-xl shadow-2xl overflow-hidden">
+                            <iframe width="100%" height="auto"
+                                src="https://www.youtube.com/embed/VIDEO_ID_4?controls=0&modestbranding=1"
+                                title="YouTube video player 4" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                        <p class="text-center text-sm text-gray-600 mt-2 font-semibold">Highlights: Event C (Dup)
+                        </p>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-container rounded-xl shadow-2xl overflow-hidden">
+                            <iframe width="100%" height="auto"
+                                src="https://www.youtube.com/embed/VIDEO_ID_5?controls=0&modestbranding=1"
+                                title="YouTube video player 5" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                        <p class="text-center text-sm text-gray-600 mt-2 font-semibold">Teaser: Couple D (Dup)</p>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-container rounded-xl shadow-2xl overflow-hidden">
+                            <iframe width="100%" height="auto"
+                                src="https://www.youtube.com/embed/VIDEO_ID_6?controls=0&modestbranding=1"
+                                title="YouTube video player 6" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                        <p class="text-center text-sm text-gray-600 mt-2 font-semibold">Full Film: Couple E (Dup)
+                        </p>
+                    </div>
 
-              </div>
-          </div>
+                </div>
+            </div>
         </section>
 
-                <!-- Neon Social Follow — Olive Green Theme (responsive + tilt + glow) -->
-<section aria-labelledby="social-follow" class="py-10 px-3 sm:px-6 lg:px-10">
-  <div class="max-w-6xl mx-auto">
-    <h2 id="social-follow" class="text-center text-3xl sm:text-4xl font-semibold mb-10 text-gray-900">
-      Follow Us
-    </h2>
+        <!-- Neon Social Follow — Olive Green Theme (responsive + tilt + glow) -->
+        <section aria-labelledby="social-follow" class="py-10 px-3 sm:px-6 lg:px-10">
+            <div class="max-w-6xl mx-auto">
+                <h2 id="social-follow" class="text-center text-3xl sm:text-4xl font-semibold mb-10 text-gray-900">
+                    Follow Us
+                </h2>
 
-    <div class="flex flex-col lg:flex-row gap-6 items-stretch">
+                <div class="flex flex-col lg:flex-row gap-6 items-stretch">
 
-      <!-- 🎥 YOUTUBE NEON CARD -->
-      <a href="https://www.youtube.com/@photowalaa-w6m" target="_blank" rel="noopener"
-         class="group relative overflow-hidden rounded-2xl p-6 sm:p-8 flex-1 bg-gradient-to-b from-[#3a4a1b]/60 to-[#556b2f]/40 border border-transparent shadow-2xl"
-         data-tilt data-tilt-max="8">
+                    <!-- 🎥 YOUTUBE NEON CARD -->
+                    <a href="https://www.youtube.com/@photowalaa-w6m" target="_blank" rel="noopener"
+                        class="group relative overflow-hidden rounded-2xl p-6 sm:p-8 flex-1 bg-gradient-to-b from-[#FF0000]/80 to-[#8B0000]/60 border border-transparent shadow-2xl"
+                        data-tilt data-tilt-max="8">
 
-        <div aria-hidden="true" class="absolute inset-0 pointer-events-none">
-          <div class="absolute -inset-1 blur-3xl opacity-40 scale-105 transform-gpu bg-gradient-to-r from-[#9cbf4f] via-[#8a9b2c] to-[#c4d77c] mix-blend-screen"></div>
-        </div>
+                        <div aria-hidden="true" class="absolute inset-0 pointer-events-none">
+                            <div
+                                class="absolute -inset-1 blur-3xl opacity-40 scale-105 transform-gpu bg-gradient-to-r from-[#FF4E45] via-[#FF0000] to-[#8B0000] mix-blend-screen">
+                            </div>
+                        </div>
 
-        <div class="relative z-10 flex flex-col justify-between h-full">
-          <div>
-            <div class="flex items-center gap-3 mb-4">
-              <svg class="w-10 h-10 text-green-500" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M23.498..."></path>
-              </svg>
-              <div>
-                <p class="text-xs sm:text-sm uppercase tracking-widest text-green-200">Official Channel</p>
-                <h3 class="text-2xl sm:text-3xl font-bold text-white">PHOTOWALAA</h3>
-              </div>
+                        <div class="relative z-10 flex flex-col justify-between h-full">
+                            <div>
+                                <div class="flex items-center gap-3 mb-4">
+                                    <svg class="w-10 h-10 text-red-500" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M23.498..."></path>
+                                    </svg>
+                                    <div>
+                                        <p class="text-xs sm:text-sm uppercase tracking-widest text-red-200">Official
+                                            Channel</p>
+                                        <h3 class="text-2xl sm:text-3xl font-bold text-white">PHOTOWALAA</h3>
+                                    </div>
+                                </div>
+                                <p class="text-sm text-red-100/80 leading-relaxed">
+                                    Watch our latest wedding films, teasers, and BTS. Subscribe for monthly releases.
+                                </p>
+                            </div>
+
+                            <div class="mt-6">
+                                <span
+                                    class="inline-flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold bg-white/10 border border-white/20 hover:bg-red-600/20 hover:scale-[1.03] transition">
+                                    <span class="text-white">Subscribe on YouTube</span>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+
+
+                    <!-- 📌 RIGHT SIDE STACK -->
+                    <div class="flex-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6">
+
+                        <!-- 📌 INSTAGRAM -->
+                        <a href="https://www.instagram.com/photowalaa___" target="_blank" rel="noopener"
+                            class="group relative overflow-hidden rounded-2xl p-5 bg-gradient-to-b from-[#F58529] via-[#DD2A7B] to-[#8134AF] shadow-xl flex items-center gap-4"
+                            data-tilt data-tilt-max="6">
+
+                            <div class="flex-none">
+                                <div
+                                    class="w-14 h-14 rounded-lg bg-gradient-to-tr from-[#FEDA77] via-[#DD2A7B] to-[#8134AF] flex items-center justify-center shadow-lg">
+                                    <svg class="w-7 h-7 text-white" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="..." />
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <div class="flex-1">
+                                <p class="text-sm text-pink-200 uppercase tracking-wider">Instagram</p>
+                                <h4 class="text-lg font-bold text-white truncate">@photowalaa___</h4>
+                                <p class="mt-2 text-sm text-pink-100/70">
+                                    BTS, reels & candid moments — daily updates.
+                                </p>
+                            </div>
+
+                            <div aria-hidden
+                                class="absolute -right-6 -top-6 w-24 h-24 rounded-full opacity-30 blur-2xl bg-gradient-to-tr from-[#FEDA77] via-[#DD2A7B] to-[#8134AF]">
+                            </div>
+                        </a>
+
+
+                        <!-- 📌 CONTACT -->
+                        <div class="rounded-2xl p-5 bg-gradient-to-b from-[#2b3a11] to-[#1f2a0f] shadow-xl">
+                            <p class="text-sm text-green-200">Got a shoot or inquiry?</p>
+                            <p class="mt-1 text-white font-semibold">
+                                Book a consultation — <a href="mailto:hello@photowalaa.com"
+                                    class="text-green-300 underline">hello@photowalaa.com</a>
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
             </div>
-            <p class="text-sm text-green-100/80 leading-relaxed">
-              Watch our latest wedding films, teasers, and BTS. Subscribe for monthly releases.
-            </p>
-          </div>
+        </section>
 
-          <div class="mt-6">
-            <span class="inline-flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold bg-white/5 border border-white/10 hover:scale-[1.03] transition">
-              <span class="text-white">Subscribe on YouTube</span>
-            </span>
-          </div>
-        </div>
-      </a>
 
-      <!-- 📌 RIGHT SIDE STACK -->
-      <div class="flex-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6">
+        <!-- Tiny tilt script (progressive enhancement). Paste once at bottom of page -->
+        <script>
+                (function () {
+                    // Respect prefers-reduced-motion
+                    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+                    if (prefersReduced) return;
 
-        <!-- 📌 INSTAGRAM -->
-        <a href="https://www.instagram.com/photowalaa___" target="_blank" rel="noopener"
-           class="group relative overflow-hidden rounded-2xl p-5 bg-gradient-to-b from-[#4c5b1f] to-[#3a4a1b] shadow-xl flex items-center gap-4"
-           data-tilt data-tilt-max="6">
+                    function initTilt() {
+                        const nodes = document.querySelectorAll('[data-tilt]');
+                        nodes.forEach(node => {
+                            const max = Number(node.getAttribute('data-tilt-max')) || 8;
+                            node.style.transformStyle = 'preserve-3d';
+                            node.addEventListener('pointermove', (e) => {
+                                const rect = node.getBoundingClientRect();
+                                const px = (e.clientX - rect.left) / rect.width;
+                                const py = (e.clientY - rect.top) / rect.height;
+                                const rotY = (px - 0.5) * (max * 2); // left-right
+                                const rotX = (0.5 - py) * (max * 1.2); // top-bottom
+                                node.style.transform = `perspective(900px) rotateX(${rotX}deg) rotateY(${rotY}deg) translateZ(0)`;
+                            });
+                            node.addEventListener('pointerleave', () => {
+                                node.style.transform = `perspective(900px) rotateX(0deg) rotateY(0deg)`;
+                            });
+                        });
+                    }
 
-          <div class="flex-none">
-            <div class="w-14 h-14 rounded-lg bg-gradient-to-tr from-[#b0d56b] via-[#8aa22b] to-[#c4e27c] flex items-center justify-center shadow-lg">
-              <svg class="w-7 h-7 text-white" viewBox="0 0 24 24" fill="currentColor"><path d="..."/></svg>
-            </div>
-          </div>
+                    if (document.readyState === 'complete' || document.readyState === 'interactive') {
+                        initTilt();
+                    } else {
+                        window.addEventListener('DOMContentLoaded', initTilt);
+                    }
+                })();
+        </script>
 
-          <div class="flex-1">
-            <p class="text-sm text-green-200 uppercase tracking-wider">Instagram</p>
-            <h4 class="text-lg font-bold text-white truncate">@photowalaa___</h4>
-            <p class="mt-2 text-sm text-green-100/70">
-              BTS, reels & candid moments — daily updates.
-            </p>
-          </div>
-
-          <div aria-hidden class="absolute -right-6 -top-6 w-24 h-24 rounded-full opacity-30 blur-2xl bg-gradient-to-tr from-[#8cbf3c] to-[#d4eb8f]"></div>
-        </a>
-
-        <!-- 📌 CONTACT -->
-        <div class="rounded-2xl p-5 bg-gradient-to-b from-[#2b3a11] to-[#1f2a0f] shadow-xl">
-          <p class="text-sm text-green-200">Got a shoot or inquiry?</p>
-          <p class="mt-1 text-white font-semibold">
-            Book a consultation — <a href="mailto:hello@photowalaa.com" class="text-green-300 underline">hello@photowalaa.com</a>
-          </p>
-        </div>
-
-      </div>
-    </div>
-  </div>
-</section>
-
-          
-          <!-- Tiny tilt script (progressive enhancement). Paste once at bottom of page -->
-          <script>
-            (function () {
-              // Respect prefers-reduced-motion
-              const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-              if (prefersReduced) return;
-          
-              function initTilt() {
-                const nodes = document.querySelectorAll('[data-tilt]');
-                nodes.forEach(node => {
-                  const max = Number(node.getAttribute('data-tilt-max')) || 8;
-                  node.style.transformStyle = 'preserve-3d';
-                  node.addEventListener('pointermove', (e) => {
-                    const rect = node.getBoundingClientRect();
-                    const px = (e.clientX - rect.left) / rect.width;
-                    const py = (e.clientY - rect.top) / rect.height;
-                    const rotY = (px - 0.5) * (max * 2); // left-right
-                    const rotX = (0.5 - py) * (max * 1.2); // top-bottom
-                    node.style.transform = `perspective(900px) rotateX(${rotX}deg) rotateY(${rotY}deg) translateZ(0)`;
-                  });
-                  node.addEventListener('pointerleave', () => {
-                    node.style.transform = `perspective(900px) rotateX(0deg) rotateY(0deg)`;
-                  });
-                });
-              }
-          
-              if (document.readyState === 'complete' || document.readyState === 'interactive') {
-                initTilt();
-              } else {
-                window.addEventListener('DOMContentLoaded', initTilt);
-              }
-            })();
-          </script>
-          
-          <!-- Notes:
+        <!-- Notes:
             • This uses Tailwind utility classes (ensure Tailwind is included in your project).
             • The small script only enhances hover with tilt; if JS is disabled, layout remains static and attractive.
             • Swap links and email address to your real values.
@@ -1239,7 +1308,8 @@
                 <div class="grid md:grid-cols-3 gap-8 text-text-dark">
                     <!-- Testimonial 1 -->
                     <div class="animate-on-scroll bg-white p-6 rounded-xl shadow-xl italic">
-                        <img src="https://placehold.co/80x80/E3B5A4/9D8189?text=P&T" alt="Priyanka & Tanmay Avatar" class="w-20 h-20 rounded-full mx-auto mb-4">
+                        <img src="https://placehold.co/80x80/E3B5A4/9D8189?text=P&T" alt="Priyanka & Tanmay Avatar"
+                            class="w-20 h-20 rounded-full mx-auto mb-4">
                         <p class="mb-4">"Photowalaa captured the true essence of our wedding. Every picture tells a
                             story. They were professional, friendly, and truly passionate. Highly recommend Rahul and
                             his team!"</p>
@@ -1248,7 +1318,8 @@
                     </div>
                     <!-- Testimonial 2 -->
                     <div class="animate-on-scroll bg-white p-6 rounded-xl shadow-xl italic">
-                        <img src="https://placehold.co/80x80/E3B5A4/9D8189?text=N&V" alt="Nikhita & Vinay Avatar" class="w-20 h-20 rounded-full mx-auto mb-4">
+                        <img src="https://placehold.co/80x80/E3B5A4/9D8189?text=N&V" alt="Nikhita & Vinay Avatar"
+                            class="w-20 h-20 rounded-full mx-auto mb-4">
                         <p class="mb-4">"The cinematic film was a masterpiece! It brings us to tears every time we watch
                             it. They made us feel so comfortable, and the delivery timeline was quicker than expected."
                         </p>
@@ -1257,7 +1328,8 @@
                     </div>
                     <!-- Testimonial 3 -->
                     <div class="animate-on-scroll bg-white p-6 rounded-xl shadow-xl italic">
-                        <img src="https://placehold.co/80x80/E3B5A4/9D8189?text=N&S" alt="Nema & Sangamesh Avatar" class="w-20 h-20 rounded-full mx-auto mb-4">
+                        <img src="https://placehold.co/80x80/E3B5A4/9D8189?text=N&S" alt="Nema & Sangamesh Avatar"
+                            class="w-20 h-20 rounded-full mx-auto mb-4">
                         <p class="mb-4">"Their dedication is unmatched. They captured the raw, fleeting moments that we
                             didn't even know happened. Choosing Photowalaa was the best decision we made for our big
                             day."</p>
@@ -1269,67 +1341,98 @@
         </section>
 
         <!-- 6. PRICING SECTION -->
-        <section id="pricing" class="animate-on-scroll snap-section bg-white p-4 sm:p-10 md:p-16 lg:p-20 pt-8 sm:pt-12 md:pt-16">
+        <section id="pricing"
+            class="animate-on-scroll snap-section bg-white p-4 sm:p-10 md:p-16 lg:p-20 pt-8 sm:pt-12 md:pt-16">
             <div class="max-w-6xl mx-auto">
                 <p class="text-center text-primary text-xs sm:text-sm tracking-widest uppercase mb-2">Our Packages</p>
-                <h3 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-semibold text-text-dark text-center mb-6 sm:mb-8 md:mb-12">
+                <h3
+                    class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-semibold text-text-dark text-center mb-6 sm:mb-8 md:mb-12">
                     Choose Your Perfect Wedding Story
                 </h3>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
                     <!-- Package 1: Basic -->
-                    <div class="animate-on-scroll bg-background-light p-4 sm:p-6 md:p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 text-center border-2 border-transparent hover:border-primary">
-                        <h4 class="font-display text-xl sm:text-2xl md:text-3xl font-bold mb-3 sm:mb-4 text-primary">Basic Package</h4>
-                        <div class="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-text-dark mb-3 sm:mb-4">₹75,000</div>
+                    <div
+                        class="animate-on-scroll bg-background-light p-4 sm:p-6 md:p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 text-center border-2 border-transparent hover:border-primary">
+                        <h4 class="font-display text-xl sm:text-2xl md:text-3xl font-bold mb-3 sm:mb-4 text-primary">
+                            Basic Package</h4>
+                        <div
+                            class="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-text-dark mb-3 sm:mb-4">
+                            ₹75,000</div>
                         <p class="text-gray-600 text-sm sm:text-base mb-4 sm:mb-6">Perfect for intimate weddings</p>
                         <ul class="text-left space-y-2 mb-4 sm:mb-6 md:mb-8 text-xs sm:text-sm">
                             <li class="flex items-center"><span class="text-primary mr-2">✓</span> 6 Hours Coverage</li>
-                            <li class="flex items-center"><span class="text-primary mr-2">✓</span> Candid Photography</li>
-                            <li class="flex items-center"><span class="text-primary mr-2">✓</span> 300+ Edited Photos</li>
+                            <li class="flex items-center"><span class="text-primary mr-2">✓</span> Candid Photography
+                            </li>
+                            <li class="flex items-center"><span class="text-primary mr-2">✓</span> 300+ Edited Photos
+                            </li>
                             <li class="flex items-center"><span class="text-primary mr-2">✓</span> Online Gallery</li>
                             <li class="flex items-center"><span class="text-primary mr-2">✓</span> Basic Album</li>
                         </ul>
-                        <a href="#contact" class="inline-block bg-primary text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full hover:bg-primary/80 transition duration-300 text-sm sm:text-base">Book Now</a>
+                        <a href="#contact"
+                            class="inline-block bg-primary text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full hover:bg-primary/80 transition duration-300 text-sm sm:text-base">Book
+                            Now</a>
                     </div>
 
                     <!-- Package 2: Premium -->
-                    <div class="animate-on-scroll bg-primary p-4 sm:p-6 md:p-8 rounded-xl shadow-lg text-center text-white relative">
-                        <div class="absolute -top-3 sm:-top-4 left-1/2 transform -translate-x-1/2 bg-secondary text-text-dark px-3 sm:px-4 py-1 rounded-full text-xs sm:text-sm font-bold">Most Popular</div>
-                        <h4 class="font-display text-xl sm:text-2xl md:text-3xl font-bold mb-3 sm:mb-4">Premium Package</h4>
-                        <div class="text-3xl sm:text-4xl md:text-5xl font-display font-bold mb-3 sm:mb-4">₹1,25,000</div>
+                    <div
+                        class="animate-on-scroll bg-primary p-4 sm:p-6 md:p-8 rounded-xl shadow-lg text-center text-white relative">
+                        <div
+                            class="absolute -top-3 sm:-top-4 left-1/2 transform -translate-x-1/2 bg-secondary text-text-dark px-3 sm:px-4 py-1 rounded-full text-xs sm:text-sm font-bold">
+                            Most Popular</div>
+                        <h4 class="font-display text-xl sm:text-2xl md:text-3xl font-bold mb-3 sm:mb-4">Premium Package
+                        </h4>
+                        <div class="text-3xl sm:text-4xl md:text-5xl font-display font-bold mb-3 sm:mb-4">₹1,25,000
+                        </div>
                         <p class="text-sm sm:text-base mb-4 sm:mb-6 opacity-90">Complete wedding coverage</p>
                         <ul class="text-left space-y-2 mb-4 sm:mb-6 md:mb-8 text-xs sm:text-sm">
                             <li class="flex items-center"><span class="mr-2">✓</span> Full Day Coverage (12 Hours)</li>
-                            <li class="flex items-center"><span class="mr-2">✓</span> Candid + Traditional Photography</li>
+                            <li class="flex items-center"><span class="mr-2">✓</span> Candid + Traditional Photography
+                            </li>
                             <li class="flex items-center"><span class="mr-2">✓</span> 600+ Edited Photos</li>
                             <li class="flex items-center"><span class="mr-2">✓</span> Cinematic Wedding Film</li>
                             <li class="flex items-center"><span class="mr-2">✓</span> Premium Album + USB</li>
                             <li class="flex items-center"><span class="mr-2">✓</span> Drone Coverage</li>
                         </ul>
-                        <a href="#contact" class="inline-block bg-white text-primary px-4 sm:px-6 py-2 sm:py-3 rounded-full hover:bg-gray-100 transition duration-300 font-semibold blob-btn text-sm sm:text-base" style="transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.2)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='';">Book Now</a>
+                        <a href="#contact"
+                            class="inline-block bg-white text-primary px-4 sm:px-6 py-2 sm:py-3 rounded-full hover:bg-gray-100 transition duration-300 font-semibold blob-btn text-sm sm:text-base"
+                            style="transition: transform 0.3s ease, box-shadow 0.3s ease;"
+                            onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.2)';"
+                            onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='';">Book Now</a>
                     </div>
 
                     <!-- Package 3: Deluxe -->
-                    <div class="animate-on-scroll bg-background-light p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 text-center border-2 border-transparent hover:border-primary">
+                    <div
+                        class="animate-on-scroll bg-background-light p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 text-center border-2 border-transparent hover:border-primary">
                         <h4 class="font-display text-3xl font-bold mb-4 text-primary">Deluxe Package</h4>
                         <div class="text-5xl font-display font-bold text-text-dark mb-4">₹2,00,000</div>
                         <p class="text-gray-600 mb-6">Luxury wedding experience</p>
                         <ul class="text-left space-y-2 mb-8">
-                            <li class="flex items-center"><span class="text-primary mr-2">✓</span> Unlimited Hours Coverage</li>
-                            <li class="flex items-center"><span class="text-primary mr-2">✓</span> Pre-Wedding Shoot</li>
-                            <li class="flex items-center"><span class="text-primary mr-2">✓</span> 1000+ Edited Photos</li>
-                            <li class="flex items-center"><span class="text-primary mr-2">✓</span> Multiple Cinematic Films</li>
-                            <li class="flex items-center"><span class="text-primary mr-2">✓</span> Luxury Album + Prints</li>
+                            <li class="flex items-center"><span class="text-primary mr-2">✓</span> Unlimited Hours
+                                Coverage</li>
+                            <li class="flex items-center"><span class="text-primary mr-2">✓</span> Pre-Wedding Shoot
+                            </li>
+                            <li class="flex items-center"><span class="text-primary mr-2">✓</span> 1000+ Edited Photos
+                            </li>
+                            <li class="flex items-center"><span class="text-primary mr-2">✓</span> Multiple Cinematic
+                                Films</li>
+                            <li class="flex items-center"><span class="text-primary mr-2">✓</span> Luxury Album + Prints
+                            </li>
                             <li class="flex items-center"><span class="text-primary mr-2">✓</span> Same-Day Teaser</li>
-                            <li class="flex items-center"><span class="text-primary mr-2">✓</span> FREE Photo Frame & Magazine</li>
+                            <li class="flex items-center"><span class="text-primary mr-2">✓</span> FREE Photo Frame &
+                                Magazine</li>
                         </ul>
-                        <a href="#contact" class="inline-block bg-primary text-white px-6 py-3 rounded-full hover:bg-primary/80 transition duration-300">Book Now</a>
+                        <a href="#contact"
+                            class="inline-block bg-primary text-white px-6 py-3 rounded-full hover:bg-primary/80 transition duration-300">Book
+                            Now</a>
                     </div>
                 </div>
 
                 <div class="text-center mt-12">
-                    <p class="text-lg text-gray-500 italic">All packages include professional editing, high-resolution files, and dedicated project management.</p>
-                    <p class="text-sm text-gray-400 mt-2">*Prices are starting points. Custom packages available upon request.</p>
+                    <p class="text-lg text-gray-500 italic">All packages include professional editing, high-resolution
+                        files, and dedicated project management.</p>
+                    <p class="text-sm text-gray-400 mt-2">*Prices are starting points. Custom packages available upon
+                        request.</p>
                 </div>
             </div>
         </section>
@@ -1514,15 +1617,15 @@
 
     <!-- FLOATING ELEMENTS -->
     <!-- Scroll to Top Button -->
-    <a href="#home" id="scroll-to-top" class="fixed bottom-20 right-5 bg-transparent text-text-dark p-3 rounded-full shadow-2xl flex items-center justify-center h-14 w-14 transition-transform hover:scale-110 z-40">
+    <a href="#home" id="scroll-to-top"
+        class="fixed bottom-20 right-5 bg-transparent text-text-dark p-3 rounded-full shadow-2xl flex items-center justify-center h-14 w-14 transition-transform hover:scale-110 z-40">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
         </svg>
     </a>
 
     <!-- Fixed WhatsApp Button -->
-    <a href="https://api.whatsapp.com/send?phone=918904801894"
-        id="whatsapp-float" target="_blank"
+    <a href="https://api.whatsapp.com/send?phone=918904801894" id="whatsapp-float" target="_blank"
         class="bg-green-500 text-white p-3 rounded-full shadow-2xl flex items-center justify-center h-14 w-14">
         <!-- WhatsApp Icon (image) -->
         <img src="photos/whatsapp.png" alt="WhatsApp" class="w-8 h-8">
@@ -1609,35 +1712,58 @@
                     <span>Photowalaa</span>
                 </a>
                 <p class="text-sm text-gray-400 mt-1">Hubli's Premier Wedding Storytellers</p>
-            <button onclick="showModal('terms-modal')"
-                class="mt-4 inline-block text-white text-sm font-light border-b border-white/50 hover:border-white transition duration-300">
-                Terms and Conditions Applied
-            </button>
-            <div class="mt-4">
-                <p class="font-semibold text-secondary text-sm">Quick Links</p>
-                <div class="flex flex-col space-y-2 mt-2">
-                    <a href="#home" class="flex items-center space-x-2 text-secondary hover:text-white transition duration-300">
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M10.707 2.293a1 1 0 00-1.414 0l-9 9a1 1 0 001.414 1.414L2 12.414V19a1 1 0 001 1h3a1 1 0 001-1v-3a1 1 0 011-1h2a1 1 0 011 1v3a1 1 0 001 1h3a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-9-9z"/></svg>
-                        <span>Home</span>
-                    </a>
-                    <a href="#about" class="flex items-center space-x-2 text-secondary hover:text-white transition duration-300">
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/></svg>
-                        <span>About</span>
-                    </a>
-                    <a href="#services" class="flex items-center space-x-2 text-secondary hover:text-white transition duration-300">
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/></svg>
-                        <span>Services</span>
-                    </a>
-                    <a href="#portfolio" class="flex items-center space-x-2 text-secondary hover:text-white transition duration-300">
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clip-rule="evenodd"/></svg>
-                        <span>Portfolio</span>
-                    </a>
-                    <a href="#contact" class="flex items-center space-x-2 text-secondary hover:text-white transition duration-300">
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
-                        <span>Contact</span>
-                    </a>
+                <button onclick="showModal('terms-modal')"
+                    class="mt-4 inline-block text-white text-sm font-light border-b border-white/50 hover:border-white transition duration-300">
+                    Terms and Conditions Applied
+                </button>
+                <div class="mt-4">
+                    <p class="font-semibold text-secondary text-sm">Quick Links</p>
+                    <div class="flex flex-col space-y-2 mt-2">
+                        <a href="#home"
+                            class="flex items-center space-x-2 text-secondary hover:text-white transition duration-300">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M10.707 2.293a1 1 0 00-1.414 0l-9 9a1 1 0 001.414 1.414L2 12.414V19a1 1 0 001 1h3a1 1 0 001-1v-3a1 1 0 011-1h2a1 1 0 011 1v3a1 1 0 001 1h3a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-9-9z" />
+                            </svg>
+                            <span>Home</span>
+                        </a>
+                        <a href="#about"
+                            class="flex items-center space-x-2 text-secondary hover:text-white transition duration-300">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span>About</span>
+                        </a>
+                        <a href="#services"
+                            class="flex items-center space-x-2 text-secondary hover:text-white transition duration-300">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span>Services</span>
+                        </a>
+                        <a href="#portfolio"
+                            class="flex items-center space-x-2 text-secondary hover:text-white transition duration-300">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span>Portfolio</span>
+                        </a>
+                        <a href="#contact"
+                            class="flex items-center space-x-2 text-secondary hover:text-white transition duration-300">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                            </svg>
+                            <span>Contact</span>
+                        </a>
+                    </div>
                 </div>
-            </div>
             </div>
             <div class="text-secondary text-sm space-y-1">
                 <p>© Copyright 2025 - PHOTOWALLA . All Rights Reserved. </p>
@@ -1645,16 +1771,19 @@
                 <!-- <p class="text-gray-400">Designed for timeless memories.</p> -->
                 <div class="mt-4 flex items-center space-x-4">
                     <p class="font-semibold text-secondary text-sm">Follow Us</p>
-                    <a href="https://www.instagram.com/rahul_kallapur?igsh=MXhpMzhqenhza3BrOQ==" target="_blank" class="text-secondary hover:opacity-75 transition duration-300">
+                    <a href="https://www.instagram.com/rahul_kallapur?igsh=MXhpMzhqenhza3BrOQ==" target="_blank"
+                        class="text-secondary hover:opacity-75 transition duration-300">
                         <img src="photos/instagram.png" alt="Instagram" class="w-4 h-4">
                     </a>
-                    <a href="https://www.youtube.com/@photowalaa-w6m" target="_blank" class="text-secondary hover:opacity-75 transition duration-300">
+                    <a href="https://www.youtube.com/@photowalaa-w6m" target="_blank"
+                        class="text-secondary hover:opacity-75 transition duration-300">
                         <img src="photos/youtube.png" alt="YouTube" class="w-4 h-4">
                     </a>
                     <a href="#" target="_blank" class="text-secondary hover:opacity-75 transition duration-300">
                         <!-- LinkedIn SVG Icon -->
                         <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            <path
+                                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                         </svg>
                     </a>
                 </div>
@@ -1731,7 +1860,7 @@
         });
 
         // Mobile menu toggle
-        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+        document.getElementById('mobile-menu-button').addEventListener('click', function () {
             const menu = document.getElementById('mobile-menu');
             menu.classList.toggle('hidden');
         });
@@ -1765,7 +1894,7 @@
         });
 
         // Scroll Progress Bar Functionality
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             const scrollTop = window.pageYOffset;
             const docHeight = document.body.scrollHeight - window.innerHeight;
             const scrollPercent = (scrollTop / docHeight) * 100;

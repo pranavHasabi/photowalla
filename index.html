@@ -690,132 +690,158 @@
     </header>
 
     <main class="snap-container">
-        <!-- 1. HERO / HOME SECTION - Animated Horizontal Grid -->
-        <section id="home"
-            class="animate-on-scroll snap-section relative flex items-center justify-center text-center p-4">
+        <!-- 1. HERO SECTION -->
+<section id="home"
+    class="animate-on-scroll snap-section relative flex items-center justify-center text-center p-4 overflow-hidden">
 
-            <!-- Animated Horizontal Grid Background -->
-            <div class="hero-background">
-                <div class="scrolling-wrapper">
-                    <!-- BEGIN ORIGINAL IMAGE SET (A full screen's worth of content) -->
-
-                    <!-- Column Set 1 (Wide, 1/2 + 1/2 split) -->
-                    <div class="grid-column-set w-[30vw] sm:w-[18vw]">
-                        <div class="grid-item h-1-2"><img src="photos/prewedding/1.png"
-                                alt="Pre-wedding couple portrait"></div>
-                        <div class="grid-item h-1-2"><img src="photos/wedding/1.png" alt="Wedding ceremony moment">
-                        </div>
-                    </div>
-                    <!-- Column Set 2 (Narrow, Single Tall) -->
-                    <div class="grid-column-set w-[18vw] sm:w-[10vw]">
-                        <div class="grid-item h-full"><img src="photos/about us.png" alt="Emotional couple embrace">
-                        </div>
-                    </div>
-                    <!-- Column Set 3 (Standard, 2/5 + 3/5 split) -->
-                    <div class="grid-column-set w-[36vw] sm:w-[24vw]">
-                        <div class="grid-item h-2-5"><img src="photos/prewedding/2.png" alt="Pre-wedding shoot detail">
-                        </div>
-                        <div class="grid-item h-3-5"><img src="photos/wedding/2.png" alt="Wedding celebration scene">
-                        </div>
-                    </div>
-                    <!-- Column Set 4 (Medium, 1/3 + 2/3 split) -->
-                    <div class="grid-column-set w-[24vw] sm:w-[15vw]">
-                        <div class="grid-item h-1-3"><img src="photos/other events/1.png"
-                                alt="Special event photography"></div>
-                        <div class="grid-item h-2-3"><img src="photos/prewedding/3.png"
-                                alt="Romantic pre-wedding moment"></div>
-                    </div>
-                    <!-- Column Set 5 (Narrow, Single Tall) -->
-                    <div class="grid-column-set w-[18vw] sm:w-[10vw]">
-                        <div class="grid-item h-full"><img src="photos/founder.png" alt="Founder portrait"></div>
-                    </div>
-                    <!-- Column Set 6 (Wide, 1/3 + 1/3 + 1/3 split) -->
-                    <div class="grid-column-set w-[36vw] sm:w-[24vw]">
-                        <div class="grid-item h-1-3"><img src="photos/wedding/3.png" alt="Traditional wedding portrait">
-                        </div>
-                        <div class="grid-item h-1-3"><img src="photos/other events/2.png"
-                                alt="Event photography highlight"></div>
-                        <div class="grid-item h-1-3"><img src="photos/other events/3.png" alt="Ceremony detail shot">
-                        </div>
-                    </div>
-                    <!-- Column Set 7 (Standard, 1/2 + 1/2 split) -->
-                    <div class="grid-column-set w-[30vw] sm:w-[18vw]">
-                        <div class="grid-item h-1-2"><img src="photos/prewedding/1.png" alt="Couple in love"></div>
-                        <div class="grid-item h-1-2"><img src="photos/wedding/1.png" alt="Wedding joy captured"></div>
-                    </div>
-                    <!-- Column Set 8 (Medium, 3/5 + 2/5 split) -->
-                    <div class="grid-column-set w-[24vw] sm:w-[15vw]">
-                        <div class="grid-item h-3-5"><img src="photos/about us.png" alt="Authentic emotion"></div>
-                        <div class="grid-item h-2-5"><img src="photos/founder.png" alt="Creative vision"></div>
-                    </div>
-
-                    <!-- BEGIN DUPLICATE IMAGE SET (for seamless looping) -->
-
-                    <!-- Column Set 1 D (Wide, 1/2 + 1/2 split) -->
-                    <div class="grid-column-set w-[20vw] sm:w-[24vw] md:w-[32vw] lg:w-[40vw]">
-                        <div class="grid-item h-1-2"><img src="/photos/kartik priya/Karthik priya_125.jpg"
-                                alt="Grid Image 1A D"></div>
-                        <div class="grid-item h-1-2"><img src="/photos/kartik priya/Karthik priya_240.jpg"
-                                alt="Grid Image 1B D"></div>
-                    </div>
-                    <!-- Column Set 2 D (Narrow, Single Tall) -->
-                    <div class="grid-column-set w-[12vw] sm:w-[14vw] md:w-[18vw] lg:w-[24vw]">
-                        <div class="grid-item h-full"><img src="/photos/kartik priya/Karthik priya_41.jpg"
-                                alt="Grid Image 2 D"></div>
-                    </div>
-
-                    <!-- update photos from here -->
-                    <!-- Column Set 3 D (Standard, 2/5 + 3/5 split) -->
-                    <div class="grid-column-set w-[24vw] sm:w-[32vw] md:w-[40vw] lg:w-[48vw]">
-                        <div class="grid-item h-2-5"><img src="/photos/founder.png" alt="Grid Image 3A D"></div>
-                        <div class="grid-item h-3-5"><img src="/photos/other events/2.png" alt="Grid Image 3B D"></div>
-                    </div>
-                    <!-- Column Set 4 D (Medium, 1/3 + 2/3 split) -->
-                    <div class="grid-column-set w-[16vw] sm:w-[20vw] md:w-[26vw] lg:w-[32vw]">
-                        <div class="grid-item h-1-3"><img src="/photos/other events/3.png" alt="Grid Image 4A D"></div>
-                        <div class="grid-item h-2-3"><img src="/photos/wedding/2.png" alt="Grid Image 4B D"></div>
-                    </div>
-                    <!-- Column Set 5 D (Narrow, Single Tall) -->
-                    <div class="grid-column-set w-[12vw] sm:w-[14vw] md:w-[18vw] lg:w-[24vw]">
-                        <div class="grid-item h-full"><img src="/photos/wedding/3.png" alt="Grid Image 5 D"></div>
-                    </div>
-                    <!-- Column Set 6 D (Wide, 1/3 + 1/3 + 1/3 split) -->
-                    <div class="grid-column-set w-[24vw] sm:w-[32vw] md:w-[40vw] lg:w-[48vw]">
-                        <div class="grid-item h-1-3"><img src="/photos/prewedding/3.png" alt="Grid Image 6A D"></div>
-                        <div class="grid-item h-1-3"><img src="/photos/wedding/1.png" alt="Grid Image 6B D"></div>
-                        <div class="grid-item h-1-3"><img src="/photos/prewedding/2.png" alt="Grid Image 6C D"></div>
-                    </div>
+    <!-- Animated Horizontal Grid Background -->
+    <div class="hero-background">
+        <div class="scrolling-wrapper">
+            <!-- ORIGINAL IMAGE SET -->
+            <div class="image-set flex">
+                <!-- Column Set 1 -->
+                <div class="grid-column-set w-[30vw] sm:w-[18vw]">
+                    <div class="grid-item h-1-2"><img src="photos/prewedding/1.png" alt="Pre-wedding couple portrait"></div>
+                    <div class="grid-item h-1-2"><img src="photos/wedding/1.png" alt="Wedding ceremony moment"></div>
+                </div>
+                <!-- Column Set 2 -->
+                <div class="grid-column-set w-[18vw] sm:w-[10vw]">
+                    <div class="grid-item h-full"><img src="photos/about us.png" alt="Emotional couple embrace"></div>
+                </div>
+                <!-- Column Set 3 -->
+                <div class="grid-column-set w-[36vw] sm:w-[24vw]">
+                    <div class="grid-item h-2-5"><img src="photos/prewedding/2.png" alt="Pre-wedding shoot detail"></div>
+                    <div class="grid-item h-3-5"><img src="photos/wedding/2.png" alt="Wedding celebration scene"></div>
+                </div>
+                <!-- Column Set 4 -->
+                <div class="grid-column-set w-[24vw] sm:w-[15vw]">
+                    <div class="grid-item h-1-3"><img src="photos/other events/1.png" alt="Special event photography"></div>
+                    <div class="grid-item h-2-3"><img src="photos/prewedding/3.png" alt="Romantic pre-wedding moment"></div>
+                </div>
+                <!-- Column Set 5 -->
+                <div class="grid-column-set w-[18vw] sm:w-[10vw]">
+                    <div class="grid-item h-full"><img src="photos/founder.png" alt="Founder portrait"></div>
+                </div>
+                <!-- Column Set 6 -->
+                <div class="grid-column-set w-[36vw] sm:w-[24vw]">
+                    <div class="grid-item h-1-3"><img src="photos/wedding/3.png" alt="Traditional wedding portrait"></div>
+                    <div class="grid-item h-1-3"><img src="photos/other events/2.png" alt="Event photography highlight"></div>
+                    <div class="grid-item h-1-3"><img src="photos/other events/3.png" alt="Ceremony detail shot"></div>
+                </div>
+                <!-- Column Set 7 -->
+                <div class="grid-column-set w-[30vw] sm:w-[18vw]">
+                    <div class="grid-item h-1-2"><img src="photos/prewedding/1.png" alt="Couple in love"></div>
+                    <div class="grid-item h-1-2"><img src="photos/wedding/1.png" alt="Wedding joy captured"></div>
+                </div>
+                <!-- Column Set 8 -->
+                <div class="grid-column-set w-[24vw] sm:w-[15vw]">
+                    <div class="grid-item h-3-5"><img src="photos/about us.png" alt="Authentic emotion"></div>
+                    <div class="grid-item h-2-5"><img src="photos/founder.png" alt="Creative vision"></div>
                 </div>
             </div>
 
-            <!-- Dark overlay to keep text readable -->
-            <div class="overlay"></div>
-
-            <div class="relative z-10 p-2 sm:p-3 md:p-4 lg:p-5 rounded-lg max-w-6xl">
-                <img src="photos/hero section/logo.png" alt="Photowalaa, Hubli"
-                    class="h-14 sm:h-20 md:h-24 lg:h-28 xl:h-36 2xl:h-40 mb-4 block mx-auto">
-                <h1
-                    class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-6xl font-display font-bold text-white leading-tight mb-4">
-                    PHOTOWALLA
-                </h1>
-                <h2
-                    class="text-base sm:text-lg md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-4xl font-display font-bold text-white leading-tight">
-                    -"WE FREEZE MOMENTS"-
-                </h2>
-                <!-- <p class="text-white text-xl sm:text-xl mt-4 font-light max-w-2xl mx-auto">
-                    Capturing Real Moments, Raw Emotions, and Timeless Memories.
-                </p> -->
-                <a href="#contact"
-                    class="mt-8 inline-block bg-primary text-white text-base font-semibold px-6 py-2 sm:text-lg sm:px-8 sm:py-3 rounded-full hover:bg-primary/80 transition duration-300 shadow-xl hover:shadow-2xl blob-btn"
-                    style="transition: transform 0.3s ease, box-shadow 0.3s ease;"
-                    onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.2)';"
-                    onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='';">
-                    Inquire now
-                </a>
+            <!-- DUPLICATE IMAGE SET (for seamless loop) -->
+            <div class="image-set flex">
+                <div class="grid-column-set w-[30vw] sm:w-[18vw]">
+                    <div class="grid-item h-1-2"><img src="photos/kartik priya/Karthik priya_125.jpg" alt="Grid Image 1A D"></div>
+                    <div class="grid-item h-1-2"><img src="photos/kartik priya/Karthik priya_240.jpg" alt="Grid Image 1B D"></div>
+                </div>
+                <div class="grid-column-set w-[18vw] sm:w-[10vw]">
+                    <div class="grid-item h-full"><img src="photos/kartik priya/Karthik priya_41.jpg" alt="Grid Image 2 D"></div>
+                </div>
+                <div class="grid-column-set w-[36vw] sm:w-[24vw]">
+                    <div class="grid-item h-2-5"><img src="photos/founder.png" alt="Grid Image 3A D"></div>
+                    <div class="grid-item h-3-5"><img src="photos/other events/2.png" alt="Grid Image 3B D"></div>
+                </div>
+                <div class="grid-column-set w-[24vw] sm:w-[15vw]">
+                    <div class="grid-item h-1-3"><img src="photos/other events/3.png" alt="Grid Image 4A D"></div>
+                    <div class="grid-item h-2-3"><img src="photos/wedding/2.png" alt="Grid Image 4B D"></div>
+                </div>
+                <div class="grid-column-set w-[18vw] sm:w-[10vw]">
+                    <div class="grid-item h-full"><img src="photos/wedding/3.png" alt="Grid Image 5 D"></div>
+                </div>
+                <div class="grid-column-set w-[36vw] sm:w-[24vw]">
+                    <div class="grid-item h-1-3"><img src="photos/prewedding/3.png" alt="Grid Image 6A D"></div>
+                    <div class="grid-item h-1-3"><img src="photos/wedding/1.png" alt="Grid Image 6B D"></div>
+                    <div class="grid-item h-1-3"><img src="photos/prewedding/2.png" alt="Grid Image 6C D"></div>
+                </div>
             </div>
-        </section>
+        </div>
+    </div>
 
-        <!-- 2. ABOUT US - STORYTELLERS -->
+    <!-- Overlay -->
+    <div class="overlay absolute inset-0 bg-black/50 z-0"></div>
+
+    <!-- HERO TEXT -->
+    <div class="relative z-10 p-2 sm:p-3 md:p-4 lg:p-5 rounded-lg max-w-6xl">
+        <img src="photos/hero section/logo.png" alt="Photowalaa, Hubli"
+            class="h-14 sm:h-20 md:h-24 lg:h-28 xl:h-36 2xl:h-40 mb-4 block mx-auto">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display font-bold text-white leading-tight mb-4">
+            PHOTOWALLA
+        </h1>
+        <h2 class="text-base sm:text-lg md:text-3xl lg:text-4xl xl:text-5xl font-display font-bold text-white leading-tight">
+            -"WE FREEZE MOMENTS"-
+        </h2>
+        <a href="#contact"
+            class="mt-8 inline-block bg-primary text-white text-base font-semibold px-6 py-2 sm:text-lg sm:px-8 sm:py-3 rounded-full hover:bg-primary/80 transition duration-300 shadow-xl hover:shadow-2xl"
+            style="transition: transform 0.3s ease, box-shadow 0.3s ease;"
+            onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.2)';"
+            onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='';">
+            Inquire now
+        </a>
+    </div>
+</section>
+
+<style>
+/* HERO BACKGROUND SCROLL */
+.hero-background {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.scrolling-wrapper {
+    display: flex;
+    width: max-content;
+    animation: scrollLoop 80s linear infinite;
+}
+
+.image-set {
+    display: flex;
+}
+
+.grid-column-set {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Infinite smooth scroll */
+@keyframes scrollLoop {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Optional pause on hover */
+.scrolling-wrapper:hover {
+    animation-play-state: paused;
+}
+</style>
+
+
+        <!-- 2. ABOUT US section -->
         <section id="about"
             class="animate-on-scroll snap-section flex flex-col md:flex-row items-center bg-background-light p-4 sm:p-8 md:p-16 lg:p-20">
             <div class="animate-on-scroll md:w-1/2 p-2 md:p-6 lg:p-8">
@@ -847,7 +873,7 @@
             </div>
         </section>
 
-        <!-- 3. SERVICES / WHAT WE OFFER -->
+        <!-- 3. SERVICES section -->
         <section id="services" class="animate-on-scroll snap-section bg-white p-4 md:p-10 lg:p-20 pt-4 md:pt-16">
             <div class="max-w-6xl mx-auto">
                 <p class="text-center text-primary text-sm tracking-widest uppercase mb-2">Our Craft</p>
@@ -1553,7 +1579,7 @@
 
                 <div class="text-center mt-8 space-y-2">
                     <p class="text-lg font-display font-semibold text-text-dark">Or Contact Us Directly:</p>
-                    <p class="text-xl text-primary font-bold">+91 972379359</p>
+                    <p class="text-xl text-primary font-bold">+91 9972379359</p>
                     <!-- Instagram Link added here -->
                     <a href="https://www.instagram.com/rahul_kallapur?igsh=MXhpMzhqenhza3BrOQ==" target="_blank"
                         class="text-gray-500 hover:text-primary transition duration-300 inline-flex items-center">
@@ -1615,7 +1641,7 @@
     </a>
 
     <!-- Fixed WhatsApp Button -->
-    <a href="https://api.whatsapp.com/send?phone=918904801894" id="whatsapp-float" target="_blank"
+    <a href="https://api.whatsapp.com/send?phone=919972379359" id="whatsapp-float" target="_blank"
         class="bg-green-500 text-white p-3 rounded-full shadow-2xl flex items-center justify-center h-14 w-14">
         <!-- WhatsApp Icon (image) -->
         <img src="photos/whatsapp.png" alt="WhatsApp" class="w-8 h-8">
